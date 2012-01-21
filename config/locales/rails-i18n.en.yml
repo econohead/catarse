@@ -4,25 +4,25 @@ en:
   # formatos de data e hora
   date:
     formats:
-      default: "%d/%m/%Y"
+      default: "%m/%d/%Y"
       short: "%d de %B"
       long: "%d de %B de %Y"
 
     day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
     abbr_day_names: [Sun, Mon, Tues, Wed, Thurs, Fri, Sat]
 
-    month_names: [~, January, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, Novemer, December]
     abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
     order:
-      - :day
       - :month
+      - :day
       - :year
 
   time:
     formats:
-      simple: "%d/%m/%Y, %H:%M h"
+      simple: "%m/%d/%Y, %H:%M h"
       default: "%A, %d de %B de %Y, %H:%M h"
-      short: "%d/%m, %H:%M h"
+      short: "%m/%d, %H:%M h"
       long: "%A, %d de %B de %Y, %H:%M h"
     am: ''
     pm: ''
@@ -31,11 +31,11 @@ en:
   support:
     array:
       words_connector: ", "
-      two_words_connector: " e "
-      last_word_connector: " e "
+      two_words_connector: " and "
+      last_word_connector: " and "
 
     select:
-      prompt: "Por favor selecione"
+      prompt: "Please select"
 
   number:
     format:
@@ -87,14 +87,14 @@ en:
           unit: ""
           thousand: "mil"
           million:
-            one: milhão
-            other: milhões
+            one: million
+            other: million
           billion:
-            one: bilhão
-            other: bilhões
+            one: billion
+            other: billion
           trillion:
-            one: trilhão
-            other: trilhões
+            one: trillion
+            other: trillion
           quadrillion:
             one: quatrilhão
             other: quatrilhões
@@ -102,56 +102,56 @@ en:
   # distancia do tempo em palavras
   datetime:
     distance_in_words:
-      half_a_minute: 'meio minuto'
+      half_a_minute: 'half a minute'
       less_than_x_seconds:
-        one: 'menos de 1 segundo'
-        other: 'menos de %{count} segundos'
+        one: 'less than 1 second'
+        other: 'less than %{count} seconds'
       x_seconds:
-        one: '1 segundo'
-        other: '%{count} segundos'
+        one: '1 second'
+        other: '%{count} secondss'
       less_than_x_minutes:
-        one: 'menos de um minuto'
-        other: 'menos de %{count} minutos'
+        one: 'less than one minute'
+        other: 'less than %{count} minutes'
       x_minutes:
-        one: '1 minuto'
-        other: '%{count} minutos'
+        one: '1 minute'
+        other: '%{count} minutes'
       about_x_hours:
-        one: 'aproximadamente 1 hora'
-        other: 'aproximadamente %{count} horas'
+        one: 'approximately 1 hour'
+        other: 'approximately %{count} hours'
       x_days:
-        one: '1 dia'
-        other: '%{count} dias'
+        one: '1 day'
+        other: '%{count} days'
       about_x_months:
-        one: 'aproximadamente 1 mês'
-        other: 'aproximadamente %{count} meses'
+        one: 'approximately 1 month'
+        other: 'approximately %{count} months'
       x_months:
-        one: '1 mês'
-        other: '%{count} meses'
+        one: '1 month'
+        other: '%{count} months'
       about_x_years:
-        one: 'aproximadamente 1 ano'
-        other: 'aproximadamente %{count} anos'
+        one: 'approximately 1 year'
+        other: 'approximately %{count} years'
       over_x_years:
-        one: 'mais de 1 ano'
-        other: 'mais de %{count} anos'
+        one: 'more than 1 year'
+        other: 'more than %{count} years'
       almost_x_years:
-        one: 'quase 1 ano'
-        other: 'quase %{count} anos'
+        one: 'almost 1 year'
+        other: 'almost %{count} years'
     prompts:
-      year:   "Ano"
-      month:  "Mês"
-      day:    "Dia"
-      hour:   "Hora"
-      minute: "Minuto"
-      second: "Segundo"
+      year:   "Year"
+      month:  "Month"
+      day:    "Day"
+      hour:   "Hour"
+      minute: "Minute"
+      second: "Second"
 
   helpers:
     select:
-      prompt: "Por favor selecione"
+      prompt: "Please Select"
 
     submit:
-      create: 'Criar %{model}'
-      update: 'Atualizar %{model}'
-      submit: 'Salvar %{model}'
+      create: 'Create %{model}'
+      update: 'Update %{model}'
+      submit: 'Submit %{model}'
 
   errors:
     format: "%{attribute} %{message}"
