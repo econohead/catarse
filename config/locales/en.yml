@@ -34,7 +34,7 @@ en:
         cpf: CPF
         email: Email
         full_name: "Full name"
-        phone_number: "Mobile phone number"
+        phone_number: "Phone number"
     models:
       backer: Backer
       category: Category
@@ -150,15 +150,15 @@ en:
       notifications:
         new_curated_pages: "Now we have cathartic channels, <a href='#curated_pages' id='curated_link'>check out</a>!"
     footer:
-      blog: "Our blog"
+      blog: "Blog"
       comum: "Grupo Comum"
       email: Contact
-      facebook: "Our Facebook"
+      facebook: "Facebook"
       faq: FAQ/Help
       guidelines: "How does it work?"
       privacy: "Privacy policy"
       terms: "Terms of use"
-      twitter: "Our Twitter"
+      twitter: "Twitter"
     login:
       description_html: "We will <strong>never</strong> know your password or any other secret data from the chosen social network. We will only have access to your basic information, like name, photo and email."
       remember_me: "Remember me and keep me connected."
@@ -418,14 +418,14 @@ en:
     base_url: "http://catarse.me"
     blog: "http://blog.catarse.me/"
     email:
-      contact: contato@catarse.me
-      payments: financeiro@catarse.me
-      projects: projetos@catarse.me
-      system: system@catarse.me
-    facebook: "http://www.facebook.com/Catarse.me"
-    name: Catarse
-    title: "The first crowdfunding platform from Brazil"
-    twitter: Catarse_
+      contact: contact@fogventures.com
+      payments: payments@fogventures.com
+      projects: projects@fogventures.com
+      system: system@fogventures.com
+    facebook: "http://www.facebook.com/pages/FogVentures/264597836934729"
+    name: Fogventures
+    title: "Crowdfunding platform"
+    twitter: fogventures
   static:
     faq:
       title: "Frequent asked questions"

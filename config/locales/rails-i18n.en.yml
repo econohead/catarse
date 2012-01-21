@@ -1,6 +1,6 @@
 # encoding: UTF-8
 # pt-BR translations for Ruby on Rails
-pt:
+en:
   # formatos de data e hora
   date:
     formats:
@@ -8,10 +8,10 @@ pt:
       short: "%d de %B"
       long: "%d de %B de %Y"
 
-    day_names: [Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado]
-    abbr_day_names: [Dom, Seg, Ter, Qua, Qui, Sex, Sáb]
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tues, Wed, Thurs, Fri, Sat]
 
-    month_names: [~, Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
+    month_names: [~, January, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro]
     abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
     order:
       - :day
@@ -48,7 +48,7 @@ pt:
     currency:
       format:
         format: '%u %n'
-        unit: 'R$'
+        unit: '$'
         separator: ','
         delimiter: ','
         precision: 2
