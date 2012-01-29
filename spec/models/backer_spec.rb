@@ -54,11 +54,11 @@ describe Backer do
   end
   it "should have a rounded display_value" do
     b = Factory.build(:backer, :value => 99.99)
-    b.display_value.should == "R$ 100"
+    b.display_value.should == "$ 100"
     b = Factory.build(:backer, :value => 1)
-    b.display_value.should == "R$ 1"
+    b.display_value.should == "$ 1"
     b = Factory.build(:backer, :value => 0.01)
-    b.display_value.should == "R$ 0"
+    b.display_value.should == "$ 0"
   end
   it "should have greater than 10 value" do
     b = Factory.build(:backer)

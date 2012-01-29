@@ -1,7 +1,7 @@
 # encoding: UTF-8
-# pt-BR translations for Ruby on Rails
+# en translations for Ruby on Rails
 en:
-  # formatos de data e hora
+  # date formats
   date:
     formats:
       default: "%m/%d/%Y"
@@ -11,8 +11,8 @@ en:
     day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
     abbr_day_names: [Sun, Mon, Tues, Wed, Thurs, Fri, Sat]
 
-    month_names: [~, January, February, March, April, May, June, July, August, September, October, Novemer, December]
-    abbr_month_names: [~, Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
     order:
       - :month
       - :day
@@ -47,10 +47,10 @@ en:
 
     currency:
       format:
-        format: '%u %n'
+        format: '%u%n'
         unit: '$'
         separator: ','
-        delimiter: ','
+        delimiter: '.'
         precision: 2
         significant: false
         strip_insignificant_zeros: false
@@ -96,8 +96,8 @@ en:
             one: trillion
             other: trillion
           quadrillion:
-            one: quatrilhão
-            other: quatrilhões
+            one: quadrillion
+            other: quadrillions
 
   # distancia do tempo em palavras
   datetime:
@@ -108,7 +108,7 @@ en:
         other: 'less than %{count} seconds'
       x_seconds:
         one: '1 second'
-        other: '%{count} secondss'
+        other: '%{count} seconds'
       less_than_x_minutes:
         one: 'less than one minute'
         other: 'less than %{count} minutes'
@@ -158,8 +158,8 @@ en:
 
     template:
       header:
-        one: "Não foi possível gravar %{model}: 1 erro"
-        other: "Não foi possível gravar %{model}: %{count} erros."
+        one: "Não foi possível gravar %{model}: 1 error"
+        other: "Não foi possível gravar %{model}: %{count} errors."
       body: "Por favor, verifique o(s) seguinte(s) campo(s):"
 
     messages: &errors_messages
