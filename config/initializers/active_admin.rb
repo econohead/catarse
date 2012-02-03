@@ -4,9 +4,10 @@ ActiveAdmin.setup do |config|
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
-  #
-  config.site_title = t('site.name')
+  # Original entry below was "#t('site.name')"
 
+  config.site_title = "Roundseed"
+  
 
   # == Default Namespace
   #
