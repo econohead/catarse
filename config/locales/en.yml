@@ -155,12 +155,12 @@ en:
       email: Contact
       facebook: "Facebook"
       faq: FAQ/Help
-      guidelines: "How Does RoundSeed Work?"
+      guidelines: "How Roundseed works?"
       privacy: "Privacy Policy"
       terms: "Terms of Use"
       twitter: "Twitter"
     login:
-      description_html: "We will <strong>never</strong> know your password or any other secret data from the chosen social network. We will only have access to your basic information, like name, photo and email."
+      description_html: "We will <strong>never</strong> store your password or any other personal data from your social network account. We only use your basic information, such as name, photo and email."
       remember_me: "Remember me."
       tips_html: "<strong>Remember with which social network you signed up</strong>. You will always access your account with it."
       title: "Login with your favorite social network"
@@ -416,14 +416,14 @@ en:
       error: "There was an error while loggin in. Please try again."
   site:
     base_url: "http://localhost:3000"
-    blog: "http://www.fogventures.com/category/blog/"
+    blog: "http://blog.roundseed.com/"
     email:
-      contact: mat@fogventures.com
-      payments: mat@fogventures.com
-      projects: mat@fogventures.com
-      system: mat@fogventures.com
+      contact: contact@roundseed.com
+      payments: contact@roundseed.com
+      projects: contact@roundseed.com
+      system: contact@roundseed.com
     facebook: "http://www.facebook.com/roundseed"
-    name: RoundSeed
+    name: Roundseed
     title: "Crowdfunding Platform"
     twitter: roundseed
   static:
@@ -432,7 +432,7 @@ en:
     guidelines:
       accept: "I have read and understood how RoundSeed works."
       submit: "I want to submit my project"
-      subtitle: "Before submitting your project, learn a little bit more about how RoundSeed works."
+      subtitle: "Before submitting your project, learn more about how RoundSeed works."
       title: "How RoundSeed Works?"
     privacy:
       title: "Privacy Policy"
@@ -448,7 +448,7 @@ en:
   users:
     admin_fields:
       credits: "available credits"
-      no_email: "haven't filled the email yet"
+      no_email: "haven't completed the email yet"
       title: "%{name}' info"
     backs:
       anonymous: "Anonymous back."

@@ -234,7 +234,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     raindrops (0.8.0)
-    rake (0.8.7)
+    rake (0.9.2.2)
     rcov (0.9.11)
     responders (0.6.4)
     rest-client (1.6.7)
@@ -348,7 +348,7 @@ DEPENDENCIES
   pg
   rack-timeout
   rails (= 3.0.3)
-  rake (= 0.8.7)
+  rake (>= 0.9.2.2)
   rcov
   rmagick
   routing-filter
