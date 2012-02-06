@@ -4,9 +4,6 @@
    <Group
       location = "group:"
       name = "">
-      <FileRef
-         location = "group:catarse_IDE.xcworkspace">
-      </FileRef>
       <Group
          location = "group:acceptance"
          name = "acceptance">
