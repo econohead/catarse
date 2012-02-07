@@ -45,6 +45,7 @@ gem 'enumerate_it'
 gem 'httparty'
 gem "rack-timeout"
 gem 'web_translate_it'
+gem 'thin'
 
 group :development do
   gem 'thin'
