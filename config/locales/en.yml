@@ -418,10 +418,10 @@ en:
     base_url: "http://localhost:3000"
     blog: "http://blog.roundseed.com/"
     email:
-      contact: contact@roundseed.com
-      payments: contact@roundseed.com
-      projects: contact@roundseed.com
-      system: contact@roundseed.com
+      contact: mat@fogventures.com
+      payments: mat@fogventures.com
+      projects: mat@fogventures.com
+      system: mat@fogventures.com
     facebook: "http://www.facebook.com/roundseed"
     name: Roundseed
     title: "Crowdfunding Platform"
