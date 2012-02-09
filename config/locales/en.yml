@@ -399,7 +399,7 @@ en:
   remaining_plural: left
   remaining_singular: left
   remove: remove
-  require_admin: "You must be admin to perform this action."
+  require_admin: "You must be an admin to perform this action."
   require_login: "You must be logged in to perform this action."
   require_permission: "You don't have permission to perform this action."
   reward:
@@ -409,13 +409,13 @@ en:
     sold_out: "Sold Out"
   sessions:
     auth:
-      success: "Successfully logged in. Welcome, %{name}!"
+      success: "You have successfully logged in. Welcome, %{name}!"
     destroy:
-      success: "Successfully logged out. See you!"
+      success: "You are logged out. See you soon!"
     failure:
       error: "There was an error while loggin in. Please try again."
   site:
-    base_url: "http://localhost:3000"
+    base_url: "http://smooth-dusk-1565.herokuapp.com"
     blog: "http://blog.roundseed.com/"
     email:
       contact: mat@fogventures.com
