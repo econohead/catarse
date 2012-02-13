@@ -1,14 +1,4 @@
-development: &sandbox
-  username: sdk-three_api1.sdk.com
-  password: QFZCWN5HZM8VBG7Q
-  signature: A.d9eRKfd1yVkRrtmMfCFLTqa6M9AyodL0SJkhYztxUi8W9pCXF6.4NI
-  sandbox: true
-
-test:
-  <<: *sandbox
-
-production: &production
-  username: SET_YOUR_OWN
-  password: SET_YOUR_OWN
-  signature: SET_YOUR_OWN
-  sandbox: false
+# specify the 3-token values.    
+USER: sdk-three_api1.sdk.com
+PWD:  QFZCWN5HZM8VBG7Q
+SIGNATURE: A.d9eRKfd1yVkRrtmMfCFLTqa6M9AyodL0SJkhYztxUi8W9pCXF6.4NI

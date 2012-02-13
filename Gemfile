@@ -45,11 +45,7 @@ gem 'enumerate_it'
 gem 'httparty'
 gem "rack-timeout"
 gem 'web_translate_it'
-<<<<<<< HEAD
 gem 'thin'
-=======
-gem "devise"
->>>>>>> upstream/master
 
 group :development do
   gem 'thin'

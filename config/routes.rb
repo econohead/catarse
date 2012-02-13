@@ -1,6 +1,4 @@
 Catarse::Application.routes.draw do
-  devise_for :users, :controllers => {:registrations => "registrations", :passwords => "passwords"}
-
   ActiveAdmin.routes(self)
 
   filter :locale
