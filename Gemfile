@@ -6,7 +6,7 @@ end
 source 'http://rubygems.org'
 source 'http://gems.github.com'
 gem 'rails', '3.0.3'
-gem 'rake' , '>= 0.9.2.2'
+gem 'rake', '0.8.7'
 gem 'haml'
 gem 'slim'
 gem 'sass', '3.1.7'
@@ -46,6 +46,7 @@ gem 'httparty'
 gem "rack-timeout"
 gem 'web_translate_it'
 gem 'thin'
+gem "devise"
 
 group :development do
   gem 'thin'
