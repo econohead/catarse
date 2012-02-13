@@ -160,9 +160,9 @@ en:
       terms: "Terms of Use"
       twitter: "Twitter"
     login:
-      description_html: "We will <strong>never</strong> store your password or any other personal data from your social network account. We only use your basic information, such as name, photo and email."
+      description_html: "We will <strong>never</strong> store your password from your social network account. We only use your basic information, such as name, photo and email."
       remember_me: "Remember me."
-      tips_html: "<strong>Remember with which social network you signed up</strong>. You will always access your account with it."
+      tips_html: "<strong>Remember  which social network you signed up</strong> with, as this becomes your primary login when each time you return to RoundSeed."
       title: "Login with your favorite social network"
     pre_header:
       back_notice_html: "You just seeded %{link}. Tell others what you just did!"
@@ -183,7 +183,7 @@ en:
       error: "Ooops. You can only access this page after seeding a project."
       header_subtitle: "Without you, this project might not have stood a chance. Welcome to the team!"
       header_title: "Thank you! :D"
-      not_successful: "This project will only be funded if at least %{goal} is reached by %{expires_at}. If it is not successful, you will receive your money back in credits on RoundSeed. Be a good RoundSeeder, take the initiative and spread the word to increase your project's chance to succeed!"
+      not_successful: "This project will only be funded if at least %{goal} is reached by %{expires_at}. If it is not successful, you will receive your money back in credits on RoundSeed. Be a good RoundSeeder, take the initiative and spread the word to increase your project's chances of success!"
       successful: "This project will be funded on %{expires_at}, thanks to you and %{total_backers} others. Thanks a lot!"
       text_subtitle: "Share with others what you just did"
       text_title_html: "You are now part of the team that does everything to make %{link} happen."
@@ -247,7 +247,7 @@ en:
         error: "Ooops. There was an error while registering your back. Please try again."
         international:
           description: "You can use PayPal to make international payments"
-          important_html: "<p>The use of PayPal is destinated mostly for international payments. That's because you'll have only 60 days to receive an eventual refund without paying any fee.</p><p>In case you can make the regular payment through MoIP, we recommend you to do it.</p><p>But if that's not possible, don't worry: you'll always be able to receive your money back. Only, in case your refund is made more than 60 days after your payment, you'll have to pay PayPal's fee, which is 5,4% + R$0,60 per transaction.</p>"
+          important_html: "<p>The use of PayPal is designated mostly for international payments. That's because you'll have only 60 days to receive an eventual refund without paying any fee.</p><p>In case you can make the regular payment through MoIP, we recommend you to do it.</p><p>But if that's not possible, don't worry: you'll always be able to receive your money back. Only, in case your refund is made more than 60 days after your payment, you'll have to pay PayPal's fee, which is 5,4% + R$0,60 per transaction.</p>"
           submit: "Proceed to PayPal's checkout"
           title: "Want to make an international payment?"
         review_with_reward_html: "You will seed with <strong>%{value}</strong> and receive the following reward: <span class='reward'>%{reward}</span>"
@@ -432,8 +432,8 @@ en:
     guidelines:
       accept: "I have read and understood how RoundSeed works."
       submit: "I want to submit my project"
-      subtitle: "Before submitting your project, learn more about how RoundSeed works."
-      title: "How RoundSeed Works?"
+      subtitle: "Learn more about RoundSeeding, and how to be successful at it."
+      title: "What is RoundSeeding?"
     privacy:
       title: "Privacy Policy"
     terms:
