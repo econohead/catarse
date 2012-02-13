@@ -32,8 +32,11 @@ en:
         address_street: Street
         address_zip_code: "Zip code"
         cpf: CPF
+        current_password: "Current password"
         email: Email
         full_name: "Full name"
+        password: Password
+        password_confirmation: "Password Confirmation"
         phone_number: "Phone number"
     models:
       backer: Backer
@@ -87,7 +90,70 @@ en:
     show:
       backed: backed
       reached: reached
+  devise:
+    confirmations:
+      confirmed: "Your account was successfully confirmed. You are now signed in."
+      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
+      send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
+    failure:
+      already_authenticated: "You are already signed in."
+      inactive: "Your account was not activated yet."
+      invalid: "Invalid email or password."
+      invalid_token: "Invalid authentication token."
+      locked: "Your account is locked."
+      timeout: "Your session expired, please sign in again to continue."
+      unauthenticated: "You need to sign up or sign in to continue."
+      unconfirmed: "You have to confirm your account before continuing."
+    links:
+      forgot_password: "Forgot your password?"
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+    mailer:
+      confirmation_instructions:
+        subject: "Confirmation instructions"
+      reset_password_instructions:
+        subject: "Reset password instructions"
+        alt: ~
+      unlock_instructions:
+        subject: "Unlock Instructions"
+    omniauth_callbacks:
+      failure: "Could not authorize you from %{kind} because \"%{reason}\"."
+      success: "Successfully authorized from %{kind} account."
+    passwords:
+      send_instructions: "You will receive an email with instructions about how to reset your password in a few minutes."
+      send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
+      updated: "Your password was changed successfully. You are now signed in."
+      updated_not_active: "Your password was changed successfully."
+    registrations:
+      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
+      inactive_signed_up: "You have signed up successfully. However, we could not sign you in because your account is %{reason}."
+      reasons:
+        inactive: inactive
+        locked: locked
+        unconfirmed: unconfirmed
+      signed_up: "Welcome! You have signed up successfully."
+      updated: "You updated your account successfully."
+    sessions:
+      new:
+        site_title: "Sign in"
+        submit: "Sign in"
+        title: "Sign in using your email"
+      signed_in: "Signed in successfully."
+      signed_out: "Signed out successfully."
+    unlocks:
+      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
+      unlocked: "Your account was successfully unlocked. You are now signed in."
   error: "Ooops! There was an error. Please try again."
+  errors:
+    messages:
+      already_confirmed: "was already confirmed, please try signing in"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
   explore:
     index:
       categories: Categories
@@ -136,16 +202,16 @@ en:
   found_plural: Found
   found_singular: Found
   here: here
-  i_backed: "I just seeded %{name} on @RoundSeed!"
-  i_just_backed: "I just seeded %{name} on @RoundSeed!"
+  i_backed: "I just seeded %{name} on @RoundSeed"
+  i_just_backed: "I just seeded the project %{name} on @RoundSeed"
   just:
     api_test: "no text"
   layouts:
     application:
       menu:
         explore: "Explore the Projects"
-        login: Login
-        signup: Signup
+        login: "Login"
+        signup: "Signup"
         submit: "Submit Your Project"
       notifications:
         new_curated_pages: "Don't miss RoundSeed's <a href='#curated_pages' id='curated_link'>collections!</a>"
@@ -155,53 +221,73 @@ en:
       email: Contact
       facebook: "Facebook"
       faq: FAQ/Help
-      guidelines: "How Roundseed works?"
+      guidelines: "How RoundSeeding Works"
       privacy: "Privacy Policy"
       terms: "Terms of Use"
       twitter: "Twitter"
     login:
-      description_html: "We will <strong>never</strong> store your password or any other personal data from your social network account. We only use your basic information, such as name, photo and email."
-      remember_me: "Remember me."
+      another_social: "Sign in with <a href='javascript:void(0);' id='login_with_another_social'>another service</a>"
+      description_html: "We will <strong>never</strong> store your password or any other secret data from the chosen social network. We will only have access to your basic information, such as name, photo and email."
+      have_facebook_account: "Does not have a facebook account?"
+      login_with_facebook: "sign in with your facebook account"
+      new_user_from_email: "Sign in with <a href='%{login_path}' id='login_with_mail'>your email</a>"
+      or: or
+      remember_me: "Remember me and keep me connected."
       tips_html: "<strong>Remember with which social network you signed up</strong>. You will always access your account with it."
-      title: "Login with your favorite social network"
+      title: "Enter with your favorite social network"
+      title_with_email: "Sign in using your email"
     pre_header:
-      back_notice_html: "You just seeded %{link}. Tell others what you just did!"
+      back_notice_html: "You backed the project %{link}. Tell everyone what you just did!"
       content_html: "Want to know how to back a project? %{link} a step-by-step guide that we published in our blog."
-      help_link: "Read it here"
+      help_link: "Check out here"
     user:
       logout: Logout
       my_credits: "My credits"
       my_profile: "My profile"
   not_informed: "not informed"
-  notify_locale: "We identified your language by your browser. If you prefer another, click on one of the flags on the right."
+  notify_locale: "We identified your language by your browser. If you prefer another one, click on one of the flags on the right."
   on_the_spot:
     cancel: Cancel
     ok: OK
     tooltip: "Click to edit..."
+  passwords:
+    edit:
+      label_new_password: "New password"
+      submit: "Change password"
+      title: "Reset password"
+      site_title: "Change password"
+      subtitle: "You requested to reset your password. Fill your new password below and click \"Change Password\". If you did not request this password reset, just skip this page and your password will remain the same."
+    email:
+      content_html: " <p>Someone has requested a link to change your password, and you can do this through the link below.</p><p>%{link}</p><p>If you didn't request this, please ignore this email.</p><p>Your password won't change until you access the link above and create a new one.</p> "
+      title: "Reset password instructions."
+    new:
+      submit: "Send instructions to reset my password"
+      title: "Forgot password?"
+      site_title: "Recover password"
   payment_stream:
     thank_you:
-      error: "Ooops. You can only access this page after seeding a project."
-      header_subtitle: "Without you, this project might not have stood a chance. Welcome to the team!"
+      error: "Ooops. You can only access this page after backing a project."
+      header_subtitle: "Without you maybe this project wouldn't stand a chance. Welcome to the team!"
       header_title: "Thank you! :D"
-      not_successful: "This project will only be funded if at least %{goal} is reached by %{expires_at}. If it is not successful, you will receive your money back in credits on RoundSeed. Be a good RoundSeeder, take the initiative and spread the word to increase your project's chance to succeed!"
+      not_successful: "This project will only be funded if at least %{goal} is reached until %{expires_at}. In case it is not successful, you will receive your money back in credits on RoundSeed. Be a good RoundSeeder, take the initiative and spread the word to increase your project's chance to succeed!"
       successful: "This project will be funded on %{expires_at}, thanks to you and %{total_backers} others. Thanks a lot!"
-      text_subtitle: "Share with others what you just did"
-      text_title_html: "You are now part of the team that does everything to make %{link} happen."
+      text_subtitle: "Tell everyone what you just did"
+      text_title_html: "You are now part of the group that does everything to make %{link} happen."
       title: "Thank you"
   project:
     finish:
       successful:
         email_subject: "Hooray! The project you seeded was successful on RoundSeed!"
-        email_text: "The project %{project_link} thate you backed was successfully funded on RoundSeed! Time to celebrate :D<br><br>Thank you very much, from the heart, for your support! Without you this wouldn't have been possible. %{user_link} will contact you to deliver your reward. Meanwhile, share the success with everyone!"
-        facebook_text: "Hooray! The project '%{name}', which I seeded, was successful on RoundSeed!"
-        notification_text: "Hooray! The project %{link} that you seeded was successful! Spread the word!"
+        email_text: "The project %{project_link}, which you backed, was successfuly funded on RoundSeed! Time to celebrate :D<br><br>Thank you very much, from the heart, for your support! Without you this would never have been possible. Soon, %{user_link} will contact you to deliver your reward. Meanwhile, share the success with everyone!"
+        facebook_text: "Hooray! The project '%{name}', which I backed, was successful on RoundSeed!"
+        notification_text: "Hooray! The project %{link} that you backed was successful! Spread the word!"
         reward_notification_text: "%{link} will contact you shortly to deliver your reward. Enjoy!"
-        twitter_text: "Hooray! The project '%{name}', which I seeded, was successful on @RoundSeed! %{short_url}"
+        twitter_text: "Hooray! The project '%{name}', which I backed, was successful on @RoundSeed! %{short_url}"
       unsuccessful:
-        email_subject: "The project you seeded unfortunately wasn't funded on RoundSeed."
-        email_text: "The project %{project_link}, that you seeded unfortunately wasn't funded. Maybe next time!<br><br>Because of this, you received <strong>%{value}</strong> in credits to seed other projects. Should you prefer, you can request a refund %{credits_link}."
-        notification_text: "You received %{value} in credits to seed other projects. Should you prefer, you can request a refund %{link}."
-        unsuccessful_text: "The project %{link} that you seeded wasn't funded. Maybe next time!"
+        email_subject: "The project you backed unfortunately wasn't funded on RoundSeed."
+        email_text: "The project %{project_link}, that you backed, was not funded. Maybe next time!<br><br>Because of this, you received <strong>%{value}</strong> in credits to back other projects. If you prefer, you can ask for a refund %{credits_link}."
+        notification_text: "You received %{value} in credits to back other projects. If you prefer, you can request a refund %{link}."
+        unsuccessful_text: "The project %{link} that you backed wasn't funded. Maybe next time!"
     verify_if_video_exists_on_vimeo: "must exist on Vimeo"
     vimeo_regex_validation: "only Vimeo URLs are allowed"
   projects:
@@ -229,13 +315,13 @@ en:
     backers:
       checkout:
         moip_error: "Ooops. There was an error while sending your payment to MoIP. Please try again."
-        no_credits: "You don't have enough credits to seed this project."
+        no_credits: "You don't have enough credits to back this project."
         paypal_cancel: "Your PayPal payment was canceled. Please try again."
         paypal_description: "Back project"
         paypal_error: "Ooops. There was an error while sending your payment to PayPal. Please try again."
-        success: "Your payment was made successfully. Thank you!"
+        success: "Your payment made successfully. Thank you!"
       new:
-        cannot_back: "It's not possible to seed this project at the moment. Please feel free to seed others."
+        cannot_back: "It's not possible to back this project at the moment. Please consider backing another project."
         header:
           subtitle: "You are a few steps from making a difference and becoming part of this project."
           title: "Oohh yeah!"
@@ -250,22 +336,23 @@ en:
           important_html: "<p>The use of PayPal is destinated mostly for international payments. That's because you'll have only 60 days to receive an eventual refund without paying any fee.</p><p>In case you can make the regular payment through MoIP, we recommend you to do it.</p><p>But if that's not possible, don't worry: you'll always be able to receive your money back. Only, in case your refund is made more than 60 days after your payment, you'll have to pay PayPal's fee, which is 5,4% + R$0,60 per transaction.</p>"
           submit: "Proceed to PayPal's checkout"
           title: "Want to make an international payment?"
-        review_with_reward_html: "You will seed with <strong>%{value}</strong> and receive the following reward: <span class='reward'>%{reward}</span>"
-        review_without_reward_html: "You will seed with <strong>%{value}</strong> and chose not to receive any reward."
+        review_with_reward_html: "You will back with <strong>%{value}</strong> and receive the following reward: <span class='reward'>%{reward}</span>"
+        review_without_reward_html: "You will back with <strong>%{value}</strong> and chose not to receive any reward."
         submit:
-          credits: "Confirm seeding with credits"
+          credits: "Confirm backing with credits"
           moip: "Proceed to MoIP's checkout"
-        subtitle: "This is the last step to make a difference and become part of this project."
+        subtitle: "This is the last step to making a difference and become part of this project."
+        title: "Please 
         title: "Pleaes fill in the requested information and review your data"
         you_are_about_html: "You are about to become part of the group that does all it can to make %{link} happen."
     create:
-      success: "Your project was successfully created! We will contact you shortly . Thanks a lot!"
+      success: "Your project was successfully created! We'll soon contact you. Thanks a lot!"
     curated_pages_list:
       subtitle: "Discover projects curated by some of our partners"
       title: "Collections"
     form:
       add_reward: "Add reward"
-      important_html: "Please notice that RoundSeed will charge 7.5% if your project is successful, and our payment gateways (MoIP and Paypal) charge a fee that varies from 4% to 5% per transaction. Please factor this in to your funding goal."
+      important_html: "Please notice that RoundSeed will charge 5% if your project is successful, and our payment gateway charges a fee that varies, usually, from 1% to 5% per transaction. Please factor this in to your funding goal."
       project_warning:
         content_html: "Want to have your project selected? Don't forget to read %{link}."
         help_link: "our guide"
@@ -274,18 +361,18 @@ en:
       submit: "Submit Project"
     home_page_projects:
       explore_recommended: "Explore more recommended projects"
-      subtitle: "Discover the projects that caused us a Catharsis :) every day a new selection."
-      title: "Our Partner Selections!"
+      subtitle: "Discover the projects that recently caught our attention."
+      title: "New & Noteworthy"
     index:
       expiring: "Final Countdown"
       recent: "Recent Projects"
       recommended: "Recommended Projects"
       successful: "Successful Projects"
     index_header:
-      subtitle_html: "Seed amazing projects collaboratively and become part of something bigger.<br/>Promote a collective catharsis! You are the missing part in this story."
+      subtitle_html: "Fund projects collaboratively and become part of something big.<br/>Promote a collective catharsis! You're the missing part in this story."
       title: "Make the projects you believe in happen"
     index_meta_tags:
-      description: "Seed projects collaboratively and become part of something bigger. Promote a collective catharsis! You are the missing part in this story."
+      description: "Fund projects collaboratively and become part of something bigger. You just might be the missing part in this story."
     new:
       subtitle: "The time to make something happen is now! We really want to know what you're up to..."
       title: "Submit Your Project"
@@ -324,9 +411,9 @@ en:
       user: User
       value: Value
     press:
-      title: "Check out what they're saying about RoundSeed in the press:"
+      title: "Check out what they're saying about RoundSeed in the press"
     project:
-      backed: seeded
+      backed: backed
       reached: reached
     project_backers:
       empty: "No one has backed this yet. Be the first!"
@@ -337,8 +424,8 @@ en:
       subtitle_html: "A project by %{link}"
     project_list:
       expiring:
-        explore: "Explore more projects in their final countdown"
-        subtitle: "Uh! Time's almost up for these...seed'em before they end!"
+        explore: "Explore more projects in the final countdown"
+        subtitle: "Uh! Time's almost up for these ones...back'em while you can!"
         title: "Final Countdown"
       recent:
         explore: "Discover Recent Projects"
@@ -349,16 +436,16 @@ en:
         subtitle: "Meet our newest prides :) tomorrow your project might be here!"
         title: "Successful projects"
     project_updates:
-      empty: "This project hasn't posted an update yet. But wait and see =D"
+      empty: "This project hasn't posted any updates yet. But wait and see =D"
       submit: "Send update"
       text: "Text of the update"
       title: "Title of the update"
     project_warning:
       rejected: "This project was not selected to participate on RoundSeed. Maybe next time! :)"
-      waiting: "This project is waiting for approval. and soon we'll know if it will go online on RoundSeed ;)"
+      waiting: "This project is waiting for approval and soon we'll know if it will go online on RoundSeed ;)"
     rewards:
       reward_title: "For %{minimum} or more"
-      title: "Seed and receive..."
+      title: "Back and receive..."
     send_mail:
       success: "Your project was successfully sent! We will be contacting you shortly!"
     show:
@@ -384,7 +471,7 @@ en:
         content_html: "Want to have your project selected? Don't forget to read %{link}."
         help_link: "our guide"
       rewards: "What rewards do you want to offer?"
-      rewards_hint: "We believe that the best way to inspire people to back a project is offering amazing – and creative! – rewards. Everybody loves swag, limited editions, unique things and amazing experiences (parties, candies, balloon traveling!). Spend some time devising creative rewards and people will be interested."
+      rewards_hint: "We believe that the best way to inspire people to back a project is offering amazing – and creative! – rewards. Everybody loves limited editions, unique things and joyful experiences (parties, candies, balloon traveling!). Spend some time devising creative rewards and people will be interested."
       submit: "Submit the project"
       subtitle: "The time to make something happen is now! We really want to know what you're up to..."
       title: "Submit your project"
@@ -396,10 +483,15 @@ en:
     start_project_email:
       subject: "Project sent by %{name}"
       subject_html: "Project sent by %{link}"
+  registrations:
+    new:
+      site_title: "Sign up"
+      submit: "Sign Up"
+      title: "Sign up using you email"
   remaining_plural: left
   remaining_singular: left
   remove: remove
-  require_admin: "You must be an admin to perform this action."
+  require_admin: "You must be admin to perform this action."
   require_login: "You must be logged in to perform this action."
   require_permission: "You don't have permission to perform this action."
   reward:
@@ -413,17 +505,18 @@ en:
     destroy:
       success: "You are logged out. See you soon!"
     failure:
-      error: "There was an error while loggin in. Please try again."
+      error: "There was an error while logging in. Please try again."
   site:
+    host: smooth-dusk-1565.herokuapp.com
     base_url: "http://smooth-dusk-1565.herokuapp.com"
-    blog: "http://blog.roundseed.com/"
+    blog: "http://smooth-dusk-1565.herokuapp.com/blog"
     email:
       contact: mat@fogventures.com
       payments: mat@fogventures.com
       projects: mat@fogventures.com
       system: mat@fogventures.com
     facebook: "http://www.facebook.com/roundseed"
-    name: Roundseed
+    name: RoundSeed
     title: "Crowdfunding Platform"
     twitter: roundseed
   static:
@@ -441,9 +534,9 @@ en:
   terms: "terms of use"
   user:
     backs_text:
-      many: "Seeded this and another %{total} projects"
-      one: "Seeded only this project...so far"
-      two: "Seeded this and 1 other project"
+      many: "Backed this and another %{total} projects"
+      one: "Backed only this project...so far"
+      two: "Backed this and 1 other project"
     no_name: Unnamed
   users:
     admin_fields:
@@ -452,17 +545,21 @@ en:
       title: "%{name}' info"
     backs:
       anonymous: "Anonymous back."
-      no_backs: "%{name} hasn't seeded a project yet. But we know it's just a matter of time! :D"
-      no_backs_current_user_html: "You haven't seeded a project yet. What about <a href=\"/\">starting now</a>?"
+      no_backs: "%{name} hasn't backed a project yet. But we know it's just a matter of time! :D"
+      no_backs_current_user_html: "You haven't backed a project yet. What about <a href=\"/\">starting now</a>?"
       no_reward: "You didn't pick a reward"
       title: "Projects %{name} has seeded"
       title_current_user: "Projects I've seeded"
       your_reward: "Your reward"
     current_user_fields:
-      email_hint: "Your email will only be used for communications from RoundSeeded and from the projects you back. It won't be visible in your profile. When you seed a project, we will give your email to the project owner so he can provide your rewards."
+      change_password: "Change my password"
+      current_password_hint: "<i>We need your current password to confirm your changes.</i>"
+      email_hint: "Your email will only be used for communications from RoundSeed and from the projects you back. It won't be visible in your profile. When you back a project, we will give your email to the project owner so he can provide your rewards."
       email_tooltip: "Click here to fill your email..."
       gravatar_hint_html: "Want to change your picture? Use %{link} with your email. It's as simple as uploading an image and works for other sites as well ;)"
-      newsletter: "I want to receive news from Roundseed via email"
+      my_data: "My profile"
+      newsletter: "I want to receive news from RoundSeed via email"
+      password_hint: "<i>Leave blank if you don't want to change it.</i>"
     header:
       bio_tooltip: "Click here to write about you..."
       name_tooltip: "Click here to fill your name..."
@@ -479,7 +576,7 @@ en:
       intro: "You are receiving this message because you signed up on RoundSeed"
       mailee: "Message delivered by Mailee.me"
       salutation: "Big hugs,"
-      signature: "RoundSeed Team"
+      signature: "The RoundSeed Team"
       unsubscribe: Unsubscribe
       unsubscribe_long: "If you don't want to receive these emails"
       weblink: "View on the web"
