@@ -1,6 +1,6 @@
 # coding: utf-8
 class SessionsController < ApplicationController
-    
+
     skip_before_filter :detect_locale
     
     def auth
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
         unless user
             user = User.create_with_omniauth(auth)
             if session[:return_to].nil? or session[:return_to].empty?
-                session[:return_to] = user_path(user) 
+                session[:return_to] = user_path(user)
             end
         end
         session[:user_id] = user.id
@@ -28,6 +28,7 @@ class SessionsController < ApplicationController
     end
     
     def destroy
+        return redirect_to destroy_user_session_path if current_user and current_user.provider == 'devise'
         session[:user_id] = nil
         cookies.delete :remember_me_id if cookies[:remember_me_id]
         cookies.delete :remember_me_hash if cookies[:remember_me_hash]
