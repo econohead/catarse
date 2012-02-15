@@ -1,14 +1,14 @@
 development: &sandbox
-  username: sdk-three_api1.sdk.com
-  password: QFZCWN5HZM8VBG7Q
-  signature: A.d9eRKfd1yVkRrtmMfCFLTqa6M9AyodL0SJkhYztxUi8W9pCXF6.4NI
+  username: matjoh_1328483934_biz_api1.gmail.com
+  password: 1328483955
+  signature: AtrWm8sMsXwZtKZ5GIEnOIvfnA8NAoNZBN0I6w7dPf4JWFTpzXfjeiqE
   sandbox: true
 
 test:
   <<: *sandbox
 
 production: &production
-  username: SET_YOUR_OWN
-  password: SET_YOUR_OWN
-  signature: SET_YOUR_OWN
+  username: matjohnson_api1.gmail.com
+  password: QAMVEV98KUXSAER3
+  signature: A8sE16oKr5ukgfN-RaalbeROHkrpA7nz18Pi79EYvWEejc2pW1vPge90
   sandbox: false
