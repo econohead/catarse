@@ -56,21 +56,20 @@ class PaypalController < ApplicationController
   protected
 
   def initialize_paypal
-
     # TODO remove the sandbox! when ready
-    #Paypal.sandbox!
+    Paypal.sandbox!
     # TODO remove the sandbox! when ready
 
     @paypal = Paypal::Express::Request.new(
-      :username   => Configuration.find_by_name('paypal_username').value,
-      :password   => Configuration.find_by_name('paypal_password').value,
-      :signature  => Configuration.find_by_name('paypal_signature').value
+      :username   => 'matjoh_1328483934_biz_api1.gmail.com',
+      :password   => '1328483955',
+      :signature  => 'AtrWm8sMsXwZtKZ5GIEnOIvfnA8NAoNZBN0I6w7dPf4JWFTpzXfjeiqE'
     )
   end
 
   def paypal_payment(backer)
     Paypal::Payment::Request.new(
-      :currency_code => :BRL,
+      :currency_code => :USD,
       :amount => backer.value,
       :description => t('projects.pay.paypal_description'),
       :items => [{
