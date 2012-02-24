@@ -107,7 +107,7 @@ class Project < ActiveRecord::Base
   end
   def waiting_confirmation?
     return false if successful?
-    expired? and Time.now < 3.weekdays_from(expires_at)
+    expired? and Time.now < 1.weekdays_from(expires_at)
   end
   def in_time?
     expires_at >= Time.now
