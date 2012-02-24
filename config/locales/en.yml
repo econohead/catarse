@@ -416,7 +416,7 @@ en:
       error: "There was an error while loggin in. Please try again."
   site:
     base_url: "http://smooth-dusk-1565.herokuapp.com"
-    blog: "http://blog.roundseed.com/"
+    blog: "http://www.roundseed.com/blog"
     email:
       contact: mat@fogventures.com
       payments: mat@fogventures.com
@@ -428,16 +428,19 @@ en:
     twitter: roundseed
   static:
     faq:
-      title: "Frequently Asked Questions"
+      title: "FAQs"
+      subtitle: "Better understand roundseeding, collaborative funding and RoundSeed."
     guidelines:
-      accept: "I have read and understood how RoundSeed works."
+      accept: "I understand the guidelines."
       submit: "I want to submit my project"
-      subtitle: "Learn more about RoundSeeding, and how to be successful at it."
-      title: "What is RoundSeeding?"
+      subtitle: "Learn more about how RoundSeed works."
+      title: "How RoundSeed Works"
     privacy:
       title: "Privacy Policy"
+      subtitle: "Review our privacy policy and understand how you're protected with us."
     terms:
       title: "Terms of use"
+      subtitle: "Carefully read the terms of use. Site usage implies acceptance of these terms."
   terms: "terms of use"
   user:
     backs_text:
