@@ -246,18 +246,18 @@ en:
         credits_notice_html: "This payment will be made with your credits. After the confirmation, you will have <strong>%{credits}</strong> in credits to back other projects."
         error: "Ooops. There was an error while registering your back. Please try again."
         international:
-          description: "You can use PayPal to make international payments"
-          important_html: "<p>The use of PayPal is designated mostly for international payments. That's because you'll have only 60 days to receive an eventual refund without paying any fee.</p><p>In case you can make the regular payment through MoIP, we recommend you to do it.</p><p>But if that's not possible, don't worry: you'll always be able to receive your money back. Only, in case your refund is made more than 60 days after your payment, you'll have to pay PayPal's fee, which is 5,4% + R$0,60 per transaction.</p>"
+          description: "You can use PayPal to make your payment"
+          important_html: "<p>By using PayPal you'll have only 60 days to receive a refund, without paying a fee.</p><p>In case you can make the regular payment through ????, we recommend you do so.</p>"
           submit: "Proceed to PayPal's checkout"
-          title: "Want to make an international payment?"
+          title: "Want to pay with PayPal?"
         review_with_reward_html: "You will seed with <strong>%{value}</strong> and receive the following reward: <span class='reward'>%{reward}</span>"
         review_without_reward_html: "You will seed with <strong>%{value}</strong> and chose not to receive any reward."
         submit:
           credits: "Confirm seeding with credits"
-          moip: "Proceed to MoIP's checkout"
-        subtitle: "This is the last step to make a difference and become part of this project."
+          moip: "Proceed to ????'s checkout"
+        subtitle: "You are about to play a key role in making this project a success."
         title: "Pleaes fill in the requested information and review your data"
-        you_are_about_html: "You are about to become part of the group that does all it can to make %{link} happen."
+        you_are_about_html: "You are about to join the crowd that is doing all it can to make %{link} a success."
     create:
       success: "Your project was successfully created! We will contact you shortly . Thanks a lot!"
     curated_pages_list:
@@ -265,16 +265,16 @@ en:
       title: "Collections"
     form:
       add_reward: "Add reward"
-      important_html: "Please notice that RoundSeed will charge 7.5% if your project is successful, and our payment gateways (MoIP and Paypal) charge a fee that varies from 4% to 5% per transaction. Please factor this in to your funding goal."
+      important_html: "Please notice that RoundSeed will charge 4% if your project is successful, and our payment gateways charge a variable fee of up to 3.5%. Please factor this in to your funding goal."
       project_warning:
         content_html: "Want to have your project selected? Don't forget to read %{link}."
         help_link: "our guide"
-      rewards_description: "We believe that the best way to inspire people to seed a project is by offering amazing – and creative! – rewards. Everybody loves swag, limited editions, unique things and amazing experiences (parties, candies, balloon traveling!). Spend some time thinking of creative rewards that will capture other's attention."
+      rewards_description: "We believe that the best way to inspire people to seed a project is by offering amazing – and creative! – rewards. Everybody loves swag, limited editions, unique things and amazing experiences (Hot pink underwear? Meet & greets? Balloon rides?). Spend some time thinking of creative rewards that will capture other's attention."
       rewards_title: Rewards
       submit: "Submit Project"
     home_page_projects:
       explore_recommended: "Explore more recommended projects"
-      subtitle: "Discover the projects that caused us a Catharsis :) every day a new selection."
+      subtitle: "Discover the projects that caused us to say "Wow!"
       title: "Our Partner Selections!"
     index:
       expiring: "Final Countdown"
@@ -282,12 +282,12 @@ en:
       recommended: "Recommended Projects"
       successful: "Successful Projects"
     index_header:
-      subtitle_html: "Seed amazing projects collaboratively and become part of something bigger.<br/>Promote a collective catharsis! You are the missing part in this story."
-      title: "Make the projects you believe in happen"
+      title: "Help make the projects you believe in happen"
+      subtitle_html: "Seed amazing projects collaboratively and become part of something bigger.<br/>Bring the power of your crowd to a project that you love!"
     index_meta_tags:
-      description: "Seed projects collaboratively and become part of something bigger. Promote a collective catharsis! You are the missing part in this story."
+      description: "Bring the power of your crowd to a project that you love!"
     new:
-      subtitle: "The time to make something happen is now! We really want to know what you're up to..."
+      subtitle: "The time to make something happen is now! Share what you're working on..."
       title: "Submit Your Project"
     pending:
       can_finish: "Can finish?"
@@ -376,7 +376,7 @@ en:
         title: "Be part of it and share this project"
     start:
       about: "Describe your project and how much do you need"
-      about_hint: "Tell us a little about what you want to do, how much you need and what for. Be brief and punctual, but don't forget to give the readers something that moves them. After all, it's your creation and they need to see your passion taking place!"
+      about_hint: "Tell us a little about what you want to do, how much you need and what for. Be brief and punctual, but don't forget to give the readers something that moves them. After all, it's your creation and they need to see your passion in action!"
       contact: "Leave us your email address so we can contact you"
       links: "Where can we find more about you and your project?"
       links_hint: "Leave us as many links as you have, so we can get to know your work and your project better. Doesn't have to be something formal or fancy, just a few useful links."
@@ -432,7 +432,7 @@ en:
       title: "FAQs"
       subtitle: "Better understand roundseeding, collaborative funding and RoundSeed."
     guidelines:
-      accept: "I understand the guidelines."
+      accept: "I understand RoundSeed's guidelines."
       submit: "I want to submit my project"
       subtitle: "Learn more about how RoundSeed works."
       title: "How RoundSeed Works"
