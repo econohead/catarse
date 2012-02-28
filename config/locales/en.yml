@@ -282,12 +282,13 @@ en:
       recommended: "Recommended Projects"
       successful: "Successful Projects"
     index_header:
-      title: "Help make the projects you believe in happen"
       subtitle_html: "Seed amazing projects collaboratively and become part of something bigger.<br/>Bring the power of your crowd to a project that you love!"
+      title: "Help make the projects you believe in happen"
+
     index_meta_tags:
       description: "Bring the power of your crowd to a project that you love!"
     new:
-      subtitle: "The time to make something happen is now! Share with us what you're working on..."
+      subtitle: "The time to make something happen is now! Share what you're working on..."
       title: "Submit Your Project"
     pending:
       can_finish: "Can finish?"
