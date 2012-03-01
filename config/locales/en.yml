@@ -373,7 +373,7 @@ en:
         embed_title: "Embed this project on your site"
         link: Link
         link_title: "Share the link"
-        take_a_look: "Check out the project"
+        take_a_look: "Check this out,"
         title: "Be part of it and share this project"
     start:
       about: "Describe your project and how much do you need"
@@ -390,7 +390,7 @@ en:
       subtitle: "The time to make something happen is now! We really want to know what you're up to..."
       title: "Submit your project"
     twitter:
-      take_a_look: "Check out the project %{name} on @RoundSeed"
+      take_a_look: "Check out %{name} on @RoundSeed"
     video_embed:
       a_project_by_html: "A project by %{link} on RoundSeed"
   projects_mailer:
