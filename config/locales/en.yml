@@ -416,7 +416,7 @@ en:
     failure:
       error: "There was an error while loggin in. Please try again."
   site:
-    base_url: "http://smooth-dusk-1565.herokuapp.com"
+    base_url: "http://www.roundseed.com"
     blog: "http://www.roundseed.com/blog"
     email:
       contact: mat@fogventures.com
