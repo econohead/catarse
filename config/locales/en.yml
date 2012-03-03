@@ -192,7 +192,7 @@ en:
     finish:
       successful:
         email_subject: "Hooray! The project you seeded was successful on RoundSeed!"
-        email_text: "The project %{project_link} thate you backed was successfully funded on RoundSeed! Time to celebrate :D<br><br>Thank you very much, from the heart, for your support! Without you this wouldn't have been possible. %{user_link} will contact you to deliver your reward. Meanwhile, share the success with everyone!"
+        email_text: "The project %{project_link} that you backed was successfully funded on RoundSeed! Time to celebrate :D<br><br>Thank you very much, from the heart, for your support! Without you this wouldn't have been possible. %{user_link} will contact you to deliver your reward. Meanwhile, share the success with everyone!"
         facebook_text: "Hooray! The project '%{name}', which I seeded, was successful on RoundSeed!"
         notification_text: "Hooray! The project %{link} that you seeded was successful! Spread the word!"
         reward_notification_text: "%{link} will contact you shortly to deliver your reward. Enjoy!"
