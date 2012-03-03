@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.text :bio
       t.text :image_url
       t.boolean :newsletter, :default => false
-      t.boolean :project_updates, :default => false
+      t.boolean :project_updates, :default => true
       t.timestamps
     end
     constrain :users do |t|
