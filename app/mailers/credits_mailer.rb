@@ -1,6 +1,6 @@
 class CreditsMailer < ActionMailer::Base
   include ERB::Util
-  default :from => "RoundSeed <matjohnson@gmail.com>"
+  default :from => "#{I18n.t('site.name')} <#{I18n.t('site.email.system')}>"
 
   def request_refund_from(backer)
     @backer = backer
