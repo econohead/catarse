@@ -26,7 +26,7 @@ class CreateSites < ActiveRecord::Migration
       t.blog :not_blank => true
     end
     execute "INSERT INTO sites (name, title, path, host, gender, email, twitter, facebook, blog) VALUES
-    ('RoundSeed', 'A Crowdfunding Platform', 'roundseed', 'roundseed.com', 'male', 'contato@roundseed.com', '@roundseed', 'http://www.facebook.com/roundseed', 'http://www.roundseed.com/blog'),
+    ('RoundSeed', 'A Crowdfunding Platform', 'roundseed', 'roundseed.com', 'male', 'contact@roundseed.com', '@roundseed', 'http://www.facebook.com/roundseed', 'http://www.roundseed.com/blog'),
     ('Multidão', 'Produção Cultural Colaborativa', 'multidao', 'multidao.localhost', 'female', 'contato@multidao.art.br', 'multidao_art', 'http://www.facebook.com/pages/Multidaoart/139326962792941', 'http://blog.multidao.art.br')
     "
   end
