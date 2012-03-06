@@ -415,17 +415,18 @@ pt:
     failure:
       error: "Ocorreu um erro ao realizar o login. Por favor, tente novamente."
   site:
-    base_url: "http://catarse.me"
-    blog: "http://blog.catarse.me/"
+    base_url: "http://www.roundseed.com"
+    blog: "http://www.roundseed.com/blog"
     email:
-      contact: contato@catarse.me
-      payments: financeiro@catarse.me
-      projects: projetos@catarse.me
-      system: system@catarse.me
-    facebook: "http://www.facebook.com/Catarse.me"
-    name: Catarse
-    title: "A primeira plataforma de financiamento colaborativo de projetos criativos do Brasil"
-    twitter: Catarse_
+      contact: mat@fogventures.com
+      payments: mat@fogventures.com
+      privacy: privacy@roundseed.com
+      projects: mat@fogventures.com
+      system: mat@fogventures.com
+    facebook: "http://www.facebook.com/roundseed"
+    name: Roundseed
+    title: "Be Roundseeded!"
+    twitter: roundseed
   static:
     faq:
       title: "Perguntas frequentes"
