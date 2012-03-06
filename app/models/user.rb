@@ -4,13 +4,13 @@ class User < ActiveRecord::Base
   include ActionView::Helpers::TextHelper
   include Rails.application.routes.url_helpers
 
-  begin
-    sync_with_mailee :news => :newsletter, :list => "Newsletter"
-  rescue Exception => e
-    Rails.logger.error "Error when syncing with mailee: #{e.inspect}"
-  end
+    #  begin
+    #sync_with_mailee :news => :newsletter, :list => "Newsletter"
+    #rescue Exception => e
+    #Rails.logger.error "Error when syncing with mailee: #{e.inspect}"
+    #end
 
-  validates_presence_of :provider, :uid
+  validates_presence_of :provider, :uid, :site
   validates_uniqueness_of :uid, :scope => :provider
   validates_length_of :bio, :maximum => 140
   validates :email, :email => true, :allow_nil => true, :allow_blank => true
@@ -69,17 +69,17 @@ class User < ActiveRecord::Base
 
   def self.create_with_omniauth(auth, primary_user_id = nil)
     u = create! do |user|
-      user.provider = auth["provider"]
-      user.uid = auth["uid"]
-      user.name = auth["user_info"]["name"]
-      user.name = auth["user_info"][:name] if user.name.nil?
-      user.email = auth["user_info"]["email"]
-      user.email = auth["extra"]["user_hash"]["email"] if auth["extra"] and auth["extra"]["user_hash"] and user.email.nil?
-      user.nickname = auth["user_info"]["nickname"]
-      user.bio = auth["user_info"]["description"][0..139] if auth["user_info"]["description"]
-      user.image_url = auth["user_info"]["image"]
-      user.locale = I18n.locale.to_s
-    end
+    user.provider = auth["provider"]
+    user.uid = auth["uid"]
+    user.name = auth["user_info"]["name"]
+    user.name = auth["user_info"][:name] if user.name.nil?
+    user.email = auth["user_info"]["email"]
+    user.email = auth["extra"]["user_hash"]["email"] if auth["extra"] and auth["extra"]["user_hash"] and user.email.nil?
+    user.nickname = auth["user_info"]["nickname"]
+    user.bio = auth["user_info"]["description"][0..139] if auth["user_info"]["description"]
+    user.image_url = auth["user_info"]["image"]
+    user.locale = I18n.locale.to_s
+  end
     # If we could not associate by email we try to use the parameter
     if u.primary.nil? and primary_user_id
       u.primary = User.find_by_id(primary_user_id)
