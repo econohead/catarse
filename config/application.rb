@@ -8,6 +8,7 @@ module Catarse
     config.encoding = "utf-8"
     config.filter_parameters += [:password, :password_confirmation]
     config.i18n.default_locale = :en
+    config.i18n.locale = :en
     config.time_zone = 'Pacific Time (US & Canada)'
     config.generators do |g|
       g.template_engine :haml
