@@ -25,10 +25,10 @@ class Backer < ActiveRecord::Base
   def define_payment_method
     self.update_attribute :payment_method, 'MoIP'
   end
-  # after_save :update_user_credits
-  # def update_user_credits
-  #   self.user.update_credits
-  # end
+  after_save :update_user_credits
+  def update_user_credits
+    self.user.update_credits
+  end
   before_save :confirm?
   def confirm?
     if confirmed and confirmed_at.nil?
@@ -60,10 +60,10 @@ class Backer < ActiveRecord::Base
   def display_confirmed_at
     I18n.l(confirmed_at.to_date) if confirmed_at
   end
-  def platform_fee(fee=7.5)
+  def platform_fee(fee=4.5)
     (value.to_f * fee)/100
   end
-  def display_platform_fee(fee=7.5)
+  def display_platform_fee(fee=4.5)
     number_to_currency platform_fee(fee), :unit => "$", :precision => 2, :delimiter => '.'
   end
   def payment_service_fee
