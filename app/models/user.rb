@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     #Rails.logger.error "Error when syncing with mailee: #{e.inspect}"
     #end
 
-  validates_presence_of :provider, :uid, :site
+  validates_presence_of :provider, :uid
   validates_uniqueness_of :uid, :scope => :provider
   validates_length_of :bio, :maximum => 140
   validates :email, :email => true, :allow_nil => true, :allow_blank => true
