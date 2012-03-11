@@ -478,6 +478,7 @@ en:
       title_current_user: "My Projects"
   users_mailer:
     notification_email:
+      email_subject: "Thank you"
       alt: "You must enable images in order to correctly view this message."
       forward: "Foward to your friends"
       hello: Hi
