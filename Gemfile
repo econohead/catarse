@@ -11,7 +11,7 @@ gem 'haml'
 gem 'slim'
 gem 'sass', '3.1.7'
 gem 'compass', '0.11.5'
-gem "zurb-foundation"
+gem "zurb-foundation", :group => :assets
 gem 'omniauth', '0.1.6'
 gem 'formtastic', '~> 1.1.0'
 gem 'validation_reflection'
