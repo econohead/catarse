@@ -1,0 +1,496 @@
+en:
+  "no": "No"
+  "yes": "Yes"
+  accept_terms_html: "I have read and accepted the %{link}."
+  active_admin:
+    dashboard: Dashboard
+    dashboard_welcome:
+      call_to_action: foo
+      welcome: "Welcome to the Admin Dashboard"
+  activerecord:
+    attributes:
+      backer:
+        value: Value
+      project:
+        category: Category
+        expires_at: Deadline
+        headline: Headline
+        image_url: "Image URL"
+        name: Name
+        user_id: "User Id"
+        video_url: "Video URL"
+      reward:
+        description: Description
+        maximum_backers: "Maximum backers"
+        minimum_value: "Minimum value"
+      user:
+        address_city: City
+        address_complement: Complement
+        address_neighbourhood: Neighbourhood
+        address_number: Number
+        address_state: State
+        address_street: Street
+        address_zip_code: "Zip code"
+        cpf: CPF
+        email: Email
+        full_name: "Full name"
+        phone_number: "Phone number"
+    models:
+      backer: Backer
+      category: Category
+      project: Project
+      reward: Reward
+  backer:
+    display_confirmed_at: "%{time_ago} ago"
+    reward_must_be_from_project: "must be from the same project"
+    should_not_back_if_maximum_backers_been_reached: "has reached its maximum backers"
+    value_must_be_at_least_rewards_value: "must be at least %{minimum_value} for the selected reward"
+  backer_plural: backers
+  backer_singular: backer
+  click_here: "Click here"
+  clicking_here: "clicking here"
+  comment:
+    display_time: "%{time_ago} ago"
+  credits:
+    index:
+      buy_credits: "Buy credits"
+      buy_credits_html: "<strong>You don't need to have credits to back a project</strong>. You can pay online once you decide to back a project. However, if you back several projects, you may find it more convenient to buy credits in advance. This will save you having to make individual payments each time you seed a project."
+      confirm: "Are you sure you want to request a refund for this payment?"
+      created_at: "Payment date"
+      current_credits_html: "Your current balance is <span id=\"current_credits\">%{credits}</span> in credits."
+      important_html: "You have <strong>up to 180 days after the payment date</strong> to ask for a refund. If you ask for a refund, the value of your payment will be deducted from your credits."
+      no_refunds: "You don't have any payment that can be refunded"
+      project: Project
+      refund_deadline: "Refund deadline"
+      refunded: Refunded
+      refunds_title: "Payments that can be refunded"
+      request_refund: "Request refund"
+      requested_refund: "Requested refund"
+      status: Status
+      subtitle: "When a project you backed is not funded, you will receive credits to back other projects. However, if you prefer, you can request a refund of the payment here."
+      title: "My credits"
+      value: Value
+    refund:
+      cannot_refund: "This payment cannot be refunded."
+      error: "Oops. There was an error while requesting your refund."
+      no_credits: "You don't have enough credits to request this refund."
+      refunded: "This payment has already been refunded."
+      requested_refund: "You already requested a refund for this payment."
+    title: "My credits"
+  credits_mailer:
+    request_refund_from:
+      subject: "Refund request by %{name}"
+      subject_html: "User %{name} requested refund for the back %{backer_key} to the project %{backer_project} in the amount of %{backer_value} made by %{backer_payment_service} gateway."
+  curated_pages:
+    index:
+      title: "Curated pages"
+    show:
+      backed: backed
+      reached: reached
+  error: "Ooops! There was an error. Please try again."
+  explore:
+    index:
+      categories: Categories
+      expiring: "Final countdown"
+      quick_explore: "Quick search"
+      recent: Recent
+      recommended: Recommended
+      subtitle: "Explore the projects, find the ones that touch you, and make them happen!"
+      successful: Successful
+      title: "Discover Amazing Projects"
+    title: "Explore!"
+  formtastic:
+    hints:
+      backer:
+        credits: "You have <strong>%{credits}</strong> in credits and can back with up to this amount without needing to make a new payment."
+        value: "You choose the amount ;) starting with $10."
+      project:
+        about: "Tell us a little about what you want to do, how much you need and what for. Be brief and punctual, but don't forget to give the readers something that moves them. After all, it's your creation and they need to see your passion taking place!"
+        category: "Choose in which category you want your project to appear. Don't worry if you think it fits in more than one. Choose the one where you want people to find your project."
+        expires_at: "Finally, choose how long you want your campaign to last. Again, this is a strategic choice: if you put a lot of time, people will lose interest along the way; if put too little, you may not reach the minimum in time."
+        goal: "Think hard about the amount you will ask for. It should be the <strong>minimum necessary for the project to happen</strong>. Nothing more, nothing less. If you ask for too much, your chances of reaching the minimum will be lower; if don't ask for enough, you won't be able to start your project and/or hinder your future opportunities to succeed with the RoundSeed community."
+        headline: "Summarize your project in 140 characters. This sentence will be the first exposure people will have to your project, even before seeing the video. Be creative, clear and direct :)"
+        name: "What's the name of your project? Choose with care, because this will influence the chances of your project reaching the goal."
+        video_url: "Paste the URL from a <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a> video. We chose Vimeo because it looks better and doesn't have ads. This way, your project will look better too! <strong>Produce your video the best you can and make a video specifically for your campaign</strong>. If there is a single thing that differentiates the projects that reach the goal from the others is the video. Observe ;)"
+      reward:
+        description: "Describe your reward in a way that arouses people's interest to back the project. Don't be shy!"
+        maximum_backers: "If your reward is limited, tell us the maximum backers."
+        minimum_value: "This is the minimum amount to choose this reward."
+    labels:
+      backer:
+        anonymous: "I want my back to be anonymous."
+        credits: "I want to use my credits on this back."
+        reward: "Select your reward"
+        value: "With how much do you want to back?"
+      comment:
+        comment: "Leave your comment about this project"
+      project:
+        about: "About your project"
+        expires_at: "What's the deadline to reach your goal?"
+        goal: "How much do you need?"
+        name: "Name your project"
+        video_url: Video
+      reward:
+        maximum_backers: "Maximum backers (optional)"
+    optional: " (optional)"
+  found_plural: Found
+  found_singular: Found
+  here: here
+  i_backed: "I just seeded %{name} on @RoundSeed!"
+  i_just_backed: "I just seeded %{name} on @RoundSeed!"
+  just:
+    api_test: "no text"
+  layouts:
+    application:
+      menu:
+        explore: "Explore the Projects"
+        login: Login
+        signup: Signup
+        submit: "Submit Your Project"
+      notifications:
+        new_curated_pages: "Don't miss RoundSeed's <a href='#curated_pages' id='curated_link'>collections!</a>"
+    footer:
+      blog: "Blog"
+      comum: "Grupo Comum"
+      email: Contact
+      facebook: "Facebook"
+      faq: FAQ/Help
+      guidelines: "How Roundseed works?"
+      privacy: "Privacy Policy"
+      terms: "Terms of Use"
+      twitter: "Twitter"
+    login:
+      description_html: "We will <strong>never</strong> store your password from your social network account. We only use your basic information, such as name, photo and email."
+      remember_me: "Remember me."
+      tips_html: "<strong>Remember  which social network you signed up</strong> with, as this becomes your primary login when each time you return to RoundSeed."
+      title: "Login with your favorite social network"
+    pre_header:
+      back_notice_html: "You just seeded %{link}. Tell others what you just did!"
+      content_html: "Want to know how to back a project? %{link} a step-by-step guide that we published in our blog."
+      help_link: "Read it here"
+    user:
+      logout: Logout
+      my_credits: "My credits"
+      my_profile: "My profile"
+  not_informed: "not informed"
+  notify_locale: "We identified your language by your browser. If you prefer another, click on one of the flags on the right."
+  on_the_spot:
+    cancel: Cancel
+    ok: OK
+    tooltip: "Click to edit..."
+  payment_stream:
+    thank_you:
+      error: "Ooops. You can only access this page after seeding a project."
+      header_subtitle: "Without you, this project might not have stood a chance. Welcome to the team!"
+      header_title: "Thank you! :D"
+      not_successful: "This project will only be funded if at least %{goal} is reached by %{expires_at}. If it is not successful, you will receive your money back in credits on RoundSeed. Be a good RoundSeeder, take the initiative and spread the word to increase your project's chances of success!"
+      successful: "This project will be funded on %{expires_at}, thanks to you and %{total_backers} others. Thanks a lot!"
+      text_subtitle: "Share with others what you just did"
+      text_title_html: "You are now part of the team that does everything to make %{link} happen."
+      title: "Thank you"
+  project:
+    finish:
+      successful:
+        email_subject: "Hooray! The project you seeded was successful on RoundSeed!"
+        email_text: "The project %{project_link} that you backed was successfully funded on RoundSeed! Time to celebrate :D<br><br>Thank you very much, from the heart, for your support! Without you this wouldn't have been possible. %{user_link} will contact you to deliver your reward. Meanwhile, share the success with everyone!"
+        facebook_text: "Hooray! The project '%{name}', which I seeded, was successful on RoundSeed!"
+        notification_text: "Hooray! The project %{link} that you seeded was successful! Spread the word!"
+        reward_notification_text: "%{link} will contact you shortly to deliver your reward. Enjoy!"
+        twitter_text: "Hooray! The project '%{name}', which I seeded, was successful on @RoundSeed! %{short_url}"
+      unsuccessful:
+        email_subject: "The project you seeded unfortunately wasn't funded on RoundSeed."
+        email_text: "The project %{project_link}, that you seeded unfortunately wasn't funded. Maybe next time!<br><br>Because of this, you received <strong>%{value}</strong> in credits to seed other projects. Should you prefer, you can request a refund %{credits_link}."
+        notification_text: "You received %{value} in credits to seed other projects. Should you prefer, you can request a refund %{link}."
+        unsuccessful_text: "The project %{link} that you seeded wasn't funded. Maybe next time!"
+    verify_if_video_exists_on_vimeo: "must exist on Vimeo"
+    vimeo_regex_validation: "only Vimeo URLs are allowed"
+  projects:
+    admin_fields:
+      title: "Admin fields"
+    back_project:
+      backed_plural: seeded
+      backed_singular: seeded
+      has: have
+      person: Person
+      project_warning:
+        not_successful:
+          expired: "This project didn't reach the goal of %{goal} by %{date} and wasn't funded"
+          not_expired: "This project will only be funded if at least %{goal} is backed by %{date}"
+        successful:
+          expired: "This project was successful and was funded on %{date}"
+          not_expired: "This project will be successful and fund on %{date}"
+        waiting_confirmation: "We are awaiting confirmation of payments to know if this project will be funded."
+      reached_of: "Reached of"
+      submit: "Seed this project"
+    backer:
+      anonymous_backer: "Anonymous backer"
+      anonymous_description: "Opted to remain incognito"
+      no_reward: "This backer has not picked a reward"
+    backers:
+      checkout:
+        moip_error: "Ooops. There was an error while sending your payment to MoIP. Please try again."
+        no_credits: "You don't have enough credits to seed this project."
+        paypal_cancel: "Your PayPal payment was canceled. Please try again."
+        paypal_description: "Back project"
+        paypal_error: "Ooops. There was an error while sending your payment to PayPal. Please try again."
+        success: "Your payment was made successfully. Thank you!"
+      new:
+        cannot_back: "It's not possible to seed this project at the moment. Please feel free to seed others."
+        header:
+          subtitle: "You are a few steps from making a difference and becoming part of this project."
+          title: "Oohh yeah!"
+        no_reward: "Thanks. I just want to help the project."
+        submit: "Review and proceed to checkout"
+        title: "Back %{name}"
+      review:
+        credits_notice_html: "This payment will be made with your credits. After the confirmation, you will have <strong>%{credits}</strong> in credits to back other projects."
+        error: "Ooops. There was an error while registering your back. Please try again."
+        international:
+          description: "You can use PayPal to make your payment"
+          important_html: "<p>By using PayPal you'll have only 60 days to receive a refund, without paying a fee.</p><p>In case you can make the regular payment through ????, we recommend you do so.</p>"
+          submit: "Proceed to PayPal's checkout"
+          title: "Want to pay with PayPal?"
+        review_with_reward_html: "You will seed with <strong>%{value}</strong> and receive the following reward: <span class='reward'>%{reward}</span>"
+        review_without_reward_html: "You will seed with <strong>%{value}</strong> and chose not to receive any reward."
+        submit:
+          credits: "Confirm seeding with credits"
+          moip: "Proceed to ????'s checkout"
+        subtitle: "You are about to play a key role in making this project a success."
+        title: "Pleaes fill in the requested information and review your data"
+        you_are_about_html: "You are about to join the crowd that is doing all it can to make %{link} a success."
+    create:
+      success: "Your project was successfully created! We will contact you shortly . Thanks a lot!"
+    curated_pages_list:
+      subtitle: "Discover projects curated by some of our partners"
+      title: "Collections"
+    form:
+      add_reward: "Add reward"
+      important_html: "Please notice that RoundSeed will charge 4% if your project is successful, and our payment gateways charge a variable fee of up to 3.5%. Please factor this in to your funding goal."
+      project_warning:
+        content_html: "Want to have your project selected? Don't forget to read %{link}."
+        help_link: "our guide"
+      rewards_description: "We believe that the best way to inspire people to seed a project is by offering amazing – and creative! – rewards. Everybody loves swag, limited editions, unique things and amazing experiences (Hot pink underwear? Meet & greets? Balloon rides?). Spend some time thinking of creative rewards that will capture other's attention."
+      rewards_title: Rewards
+      submit: "Submit Project"
+    home_page_projects:
+      explore_recommended: "Explore more recommended projects"
+      subtitle: "Discover the projects that caused us to say Wow!"
+      title: "Our Partner Selections!"
+    index:
+      expiring: "Final Countdown"
+      recent: "Recent Projects"
+      recommended: "Recommended Projects"
+      successful: "Successful Projects"
+    index_header:
+      subtitle_html: "Seed amazing projects collaboratively and become part of something bigger.<br/>Bring the power of your crowd to a project that you love!"
+      title: "Help make the projects you believe in happen"
+
+    index_meta_tags:
+      description: "Bring the power of your crowd to a project that you love!"
+    new:
+      subtitle: "The time to make something happen is now! Share what you're working on..."
+      title: "Submit Your Project"
+    pending:
+      can_finish: "Can finish?"
+      finished: Finished?
+      home_page: "Home page?"
+      id: Id
+      name: Name
+      no_projects: "No projects found."
+      order: Order
+      project: Project
+      recommended: Recommended?
+      rejected: Rejected?
+      submit: Search
+      title: "Project Management"
+      user: User
+      visible: Visible?
+    pending_backers:
+      anonymous: Anonymous?
+      confirmed: Confirmed?
+      credits: "Used credits?"
+      id: Id
+      key: Key
+      no_backers: "No backers found."
+      project: Project
+      refunded: Refunded?
+      requested_refund: "Requested refund?"
+      reward: Reward
+      submit: Search
+      title: "Backers management"
+      total_backed: backed
+      total_backers: backers
+      total_backs: backs
+      total_users: users
+      user: User
+      value: Value
+    press:
+      title: "Check out what they're saying about RoundSeed in the press:"
+    project:
+      backed: seeded
+      reached: reached
+    project_backers:
+      empty: "No one has backed this yet. Be the first!"
+    project_comments:
+      require_login_html: "Want to send a comment? %{link} to login."
+      submit: "Send comment"
+    project_header:
+      subtitle_html: "A project by %{link}"
+    project_list:
+      expiring:
+        explore: "Explore more projects in their final countdown"
+        subtitle: "Uh! Time's almost up for these...seed'em before they end!"
+        title: "Final Countdown"
+      recent:
+        explore: "Discover Recent Projects"
+        subtitle: "Projects that just arrived on RoundSeed. Smell as if they just came out of the oven..."
+        title: "Fresh and new"
+      successful:
+        explore: "Explore more successful projects"
+        subtitle: "Meet our newest prides :) tomorrow your project might be here!"
+        title: "Successful projects"
+    project_updates:
+      empty: "This project hasn't posted an update yet. But wait and see =D"
+      submit: "Send update"
+      text: "Text of the update"
+      title: "Title of the update"
+    project_warning:
+      rejected: "This project was not selected to participate on RoundSeed. Maybe next time! :)"
+      waiting: "This project is waiting for approval. and soon we'll know if it will go online on RoundSeed ;)"
+    rewards:
+      reward_title: "For %{minimum} or more"
+      title: "Seed and receive..."
+    send_mail:
+      success: "Your project was successfully sent! We will be contacting you shortly!"
+    show:
+      menu:
+        about: About
+        backers: Backers
+        comments: Comments
+        updates: Updates
+      share:
+        embed: "Embed this project"
+        embed_title: "Embed this project on your site"
+        link: Link
+        link_title: "Share the link"
+        take_a_look: "Check this out,"
+        title: "Be part of it and share this project"
+    start:
+      about: "Describe your project and how much do you need"
+      about_hint: "Tell us a little about what you want to do, how much you need and what for. Be brief and punctual, but don't forget to give the readers something that moves them. After all, it's your creation and they need to see your passion in action!"
+      contact: "Leave us your email address so we can contact you"
+      links: "Where can we find more about you and your project?"
+      links_hint: "Leave us as many links as you have, so we can get to know your work and your project better. Doesn't have to be something formal or fancy, just a few useful links."
+      project_warning:
+        content_html: "Want to have your project selected? Don't forget to read %{link}."
+        help_link: "our guide"
+      rewards: "What rewards do you want to offer?"
+      rewards_hint: "We believe that the best way to inspire people to back a project is offering amazing – and creative! – rewards. Everybody loves swag, limited editions, unique things and amazing experiences (parties, candies, balloon traveling!). Spend some time devising creative rewards and people will be interested."
+      submit: "Submit the project"
+      subtitle: "The time to make something happen is now! We really want to know what you're up to..."
+      title: "Submit your project"
+    twitter:
+      take_a_look: "Check out %{name} on @RoundSeed"
+    video_embed:
+      a_project_by_html: "A project by %{link} on RoundSeed"
+  projects_mailer:
+    start_project_email:
+      subject: "Project sent by %{name}"
+      subject_html: "Project sent by %{link}"
+  remaining_plural: left
+  remaining_singular: left
+  remove: remove
+  require_admin: "You must be an admin to perform this action."
+  require_login: "You must be logged in to perform this action."
+  require_permission: "You don't have permission to perform this action."
+  reward:
+    display_remaining: "%{remaining} of %{maximum} available"
+    dont_want: "I don't want a reward"
+    limited: Limited
+    sold_out: "Sold Out"
+  sessions:
+    auth:
+      success: "You have successfully logged in. Welcome, %{name}!"
+    destroy:
+      success: "You are logged out. See you soon!"
+    failure:
+      error: "There was an error while loggin in. Please try again."
+  site:
+    base_url: "http://www.roundseed.com"
+    blog: "http://www.roundseed.com/blog"
+    email:
+      contact: mat@fogventures.com
+      payments: mat@fogventures.com
+      privacy: privacy@roundseed.com
+      projects: mat@fogventures.com
+      system: mat@fogventures.com
+    facebook: "http://www.facebook.com/roundseed"
+    name: Roundseed
+    title: "Be Roundseeded!"
+    twitter: roundseed
+  static:
+    faq:
+      title: "FAQs"
+      subtitle: "Better understand roundseeding, collaborative funding and RoundSeed."
+    guidelines:
+      accept: "I understand RoundSeed's guidelines."
+      submit: "I want to submit my project"
+      subtitle: "Learn more about how RoundSeed works."
+      title: "How RoundSeed Works"
+    privacy:
+      title: "Privacy Policy"
+      subtitle: "Review our privacy policy and understand how you're protected with us."
+    terms:
+      title: "Terms of use"
+      subtitle: "Carefully read the terms of use. Site usage implies acceptance of these terms."
+  terms: "terms of use"
+  user:
+    backs_text:
+      many: "Seeded this and another %{total} projects"
+      one: "Seeded only this project...so far"
+      two: "Seeded this and 1 other project"
+    no_name: Unnamed
+  users:
+    admin_fields:
+      credits: "available credits"
+      no_email: "haven't completed the email yet"
+      title: "%{name}' info"
+    backs:
+      anonymous: "Anonymous back."
+      no_backs: "%{name} hasn't seeded a project yet. But we know it's just a matter of time! :D"
+      no_backs_current_user_html: "You haven't seeded a project yet. What about <a href=\"/\">starting now</a>?"
+      no_reward: "You didn't pick a reward"
+      title: "Projects %{name} has seeded"
+      title_current_user: "Projects I've seeded"
+      your_reward: "Your reward"
+    current_user_fields:
+      email_hint: "Your email will only be used for communications from RoundSeeded and from the projects you back. It won't be visible in your profile. When you seed a project, we will give your email to the project owner so he can provide your rewards."
+      email_tooltip: "Click here to fill your email..."
+      gravatar_hint_html: "Want to change your picture? Use %{link} with your email. It's as simple as uploading an image and works for other sites as well ;)"
+      newsletter: "I want to receive news from Roundseed via email"
+    header:
+      bio_tooltip: "Click here to write about you..."
+      name_tooltip: "Click here to fill your name..."
+    projects:
+      no_projects: "%{name} hasn't started a project on RoundSeed yet. We wonder if inspiration will hit one of these days!"
+      no_projects_current_user_html: "You haven't submitted a project to RoundSeed yet. Let the inspiration flow and %{link} to start!"
+      title: "%{name}'s projects"
+      title_current_user: "My Projects"
+  users_mailer:
+    notification_email:
+      alt: "You must enable images in order to correctly view this message."
+      forward: "Foward to your friends"
+      hello: Hi
+      intro: "You are receiving this message because you signed up on RoundSeed"
+      mailee: "Message delivered by Mailee.me"
+      salutation: "Big hugs,"
+      signature: "RoundSeed Team"
+      unsubscribe: Unsubscribe
+      unsubscribe_long: "If you don't want to receive these emails"
+      weblink: "View on the web"
+      whitelist: "Add contact"
+      whitelist_long: "Add our email to your contacts"
+  will_paginate:
+    next: "Next »"
+    page_gap: "..."
+    previous: "« Previous"
