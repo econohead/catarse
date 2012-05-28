@@ -47,6 +47,7 @@ gem 'httparty'
 gem "rack-timeout"
 gem 'web_translate_it'
 gem 'thin'
+gem "devise"
 
 group :development do
   gem 'thin'
