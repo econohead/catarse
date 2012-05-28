@@ -1,3 +1,17 @@
+development: &sandbox
+  username: matjoh_1328483934_biz_api1.gmail.com
+  password: 1328483955
+  signature: AtrWm8sMsXwZtKZ5GIEnOIvfnA8NAoNZBN0I6w7dPf4JWFTpzXfjeiqE
+  sandbox: true
+
+test:
+  <<: *sandbox
+
+production: &production
+  username: matjohnson_api1.gmail.com
+  password: QAMVEV98KUXSAER3
+  signature: A8sE16oKr5ukgfN-RaalbeROHkrpA7nz18Pi79EYvWEejc2pW1vPge90
+  sandbox: false
 
 # specify the 3-token values.    
 USER: sdk-three_api1.sdk.com

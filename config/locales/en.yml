@@ -360,23 +360,18 @@ en:
       submit: "Submit Project"
     home_page_projects:
       explore_recommended: "Explore more recommended projects"
-<<<<<<< HEAD
       subtitle: "Discover the projects that caused us to say Wow!"
       title: "Our Partner Selections!"
-=======
     index:
       expiring: "Final Countdown"
       recent: "Recent Projects"
       recommended: "Recommended Projects"
       successful: "Successful Projects"
     index_header:
-<<<<<<< HEAD
       subtitle_html: "Seed amazing projects collaboratively and become part of something bigger.<br/>Bring the power of your crowd to a project that you love!"
       title: "Help make the projects you believe in happen"
-
     index_meta_tags:
       description: "Bring the power of your crowd to a project that you love!"
-=======
     new:
       subtitle: "The time to make something happen is now! Share what you're working on..."
       title: "Submit Your Project"
@@ -511,10 +506,8 @@ en:
     failure:
       error: "There was an error while logging in. Please try again."
   site:
-<<<<<<< HEAD
     base_url: "http://www.roundseed.com"
     blog: "http://www.roundseed.com/blog"
-=======
     email:
       contact: mat@fogventures.com
       payments: mat@fogventures.com
@@ -532,10 +525,8 @@ en:
     guidelines:
       accept: "I understand RoundSeed's guidelines."
       submit: "I want to submit my project"
-<<<<<<< HEAD
       subtitle: "Learn more about how RoundSeed works."
       title: "How RoundSeed Works"
-=======
     privacy:
       title: "Privacy Policy"
       subtitle: "Review our privacy policy and understand how you're protected with us."
