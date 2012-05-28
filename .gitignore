@@ -17,3 +17,5 @@ config/locales/.wti
 catarse_IDE.xcworkspace/contents.xcworkspacedata
 catarse_IDE.xcworkspace/xcuserdata/macusers.xcuserdatad/UserInterfaceState.xcuserstate
 catarse_IDE.xcworkspace/xcuserdata/macusers.xcuserdatad/WorkspaceSettings.xcsettings
+
+npm-debug.log

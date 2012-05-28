@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  helper_method :current_user, :replace_locale, :align_logo_when_home, :is_homepage?, :namespace, :fb_admins
+  helper_method :current_user, :replace_locale, :align_logo_when_home, :is_homepage?, :namespace,
+                :fb_admins, :has_institutional_videos?, :institutional_video
   before_filter :set_locale
   before_filter :detect_locale
 
@@ -19,7 +20,23 @@ class ApplicationController < ActionController::Base
     @fb_admins = [567237711]
   end
 
+  before_filter do
+    if params[:newsletter].present?
+      flash[:notice] = I18n.t('newsletter_ok_body') if params[:newsletter] == 'ok'
+      flash[:alert] = I18n.t('newsletter_error_body') if params[:newsletter] == 'error'
+    end
+  end
+
+
   private
+
+  def has_institutional_videos?
+    InstitutionalVideo.visibles.present?
+  end
+  
+  def institutional_video
+    InstitutionalVideo.visibles.random.first
+  end
 
   def fb_admins
     @fb_admins.join(',')
@@ -91,30 +108,47 @@ class ApplicationController < ActionController::Base
     if cookies[:remember_me_id] and cookies[:remember_me_hash]
       @current_user = User.find(cookies[:remember_me_id])
       @current_user = nil unless @current_user.remember_me_hash == cookies[:remember_me_hash]
-      session[:user_id] = @current_user.id
+      return session[:user_id] = @current_user.id
     end
-  rescue
+    return @current_user = request.env['warden'].authenticate(:user) rescue nil
+  rescue Exception => e
     session[:user_id] = nil
   end
+
   def redirect_back_or_default(default)
     redirect_to(session[:return_to] || default)
     session[:return_to] = nil
   end
+
+  def after_sign_in_path_for(resource_or_scope)
+    return_to = session[:return_to]
+    session[:return_to] = nil
+    (return_to || root_path)
+  end
+
   def require_condition(condition, message)
     unless condition
       flash[:failure] = message
-      redirect_to :root
-      false
+      if current_user
+        redirect_to root_path
+      else
+        session[:return_to] = request.env['REQUEST_URI']
+        redirect_to login_path
+        false
+      end
     else
       true
     end
   end
+
   def require_login
     require_condition(current_user, t('require_login'))
   end
+
   def require_admin
     require_condition((current_user and current_user.admin), t('require_admin'))
   end
+
   def render_404
     render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
   end

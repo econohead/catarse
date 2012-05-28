@@ -1,5 +1,35 @@
 # coding: utf-8
 class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable#, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email,
+                  :password,
+                  :password_confirmation,
+                  :remember_me,
+                  :name,
+                  :nickname,
+                  :bio,
+                  :image_url,
+                  :newsletter,
+                  :full_name,
+                  :address_street,
+                  :address_number,
+                  :address_complement,
+                  :address_neighbourhood,
+                  :address_city,
+                  :address_state,
+                  :address_zip_code,
+                  :phone_number,
+                  :cpf,
+                  :locale,
+                  :twitter,
+                  :facebook_link,
+                  :other_link
+
   include ActionView::Helpers::NumberHelper
   include ActionView::Helpers::TextHelper
   include Rails.application.routes.url_helpers
@@ -15,15 +45,43 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :uid, :scope => :provider
   validates_length_of :bio, :maximum => 140
   validates :email, :email => true, :allow_nil => true, :allow_blank => true
+  #validates :name, :presence => true, :if => :is_devise?
+
+  validates_presence_of     :email, :if => :is_devise?
+  validates_uniqueness_of   :email, :scope => :provider, :if => :is_devise?
+  validates_presence_of     :password, :if => :password_required?
+  validates_confirmation_of :password, :if => :password_required?
+  validates_length_of       :password, :within => 6..128, :allow_blank => true
+
   has_many :backs, :class_name => "Backer"
   has_many :projects
+  has_many :updates
   has_many :notifications
   has_many :secondary_users, :class_name => 'User', :foreign_key => :primary_user_id
   has_and_belongs_to_many :manages_projects, :join_table => "projects_managers", :class_name => 'Project'
   belongs_to :primary, :class_name => 'User', :foreign_key => :primary_user_id
   scope :primary, :conditions => ["primary_user_id IS NULL"]
   scope :backers, :conditions => ["id IN (SELECT DISTINCT user_id FROM backers WHERE confirmed)"]
+  scope :most_backeds, lambda {
+    joins(:backs).select(
+    <<-SQL
+      users.id,
+      users.name,
+      users.email,
+      count(backers.id) as count_backs
+    SQL
+    ).
+    where("backers.confirmed is true").
+    order("count_backs desc").
+    group("users.name, users.id, users.email")
+  }
   #before_save :store_primary_user
+  before_save :fix_twitter_user
+
+  def self.find_for_database_authentication(warden_conditions)
+    conditions = warden_conditions.dup
+    where(conditions).where(:provider => 'devise').first
+  end
 
   def admin?
     admin
@@ -45,10 +103,7 @@ class User < ActiveRecord::Base
   end
 
   def facebook_id
-    return uid if provider == 'facebook'
-    if secondary = secondary_users.where(provider: 'facebook').first
-      return secondary.uid
-    end
+    provider == 'facebook' && uid || secondary_users.where(provider: 'facebook').first && secondary_users.where(provider: 'facebook').first.uid
   end
 
   def update_credits
@@ -74,8 +129,8 @@ class User < ActiveRecord::Base
     u.primary.nil? ? u : u.primary
   end
 
-  def self.create_with_omniauth(auth, primary_user_id = nil)
-    u = create! do |user|
+  def self.create_with_omniauth(auth)
+    create! do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
       user.name = auth["user_info"]["name"]
@@ -87,11 +142,6 @@ class User < ActiveRecord::Base
       user.image_url = auth["user_info"]["image"]
       user.locale = I18n.locale.to_s
     end
-    # If we could not associate by email we try to use the parameter
-    if u.primary.nil? and primary_user_id
-      u.primary = User.find_by_id(primary_user_id)
-    end
-    u.primary.nil? ? u : u.primary
   end
 
   def recommended_project
@@ -145,6 +195,9 @@ class User < ActiveRecord::Base
   def display_credits
     number_to_currency credits, :unit => 'R$', :precision => 0, :delimiter => '.'
   end
+  def display_total_of_backs
+    number_to_currency backs.confirmed.sum(:value), :unit => 'R$', :precision => 0, :delimiter => '.'
+  end
   def merge_into!(new_user)
     self.primary = new_user
     new_user.credits += self.credits
@@ -185,7 +238,22 @@ class User < ActiveRecord::Base
 
   end
 
+  def is_devise?
+    provider == 'devise'
+  end
+
+  def twitter_link
+    "http://twitter.com/#{self.twitter}"
+  end
+
   protected
+  def fix_twitter_user
+    self.twitter.gsub! /@/, '' if self.twitter
+  end
+
+  def password_required?
+    provider == 'devise' && (!persisted? || !password.nil? || !password_confirmation.nil?)
+  end
 
   # Returns a Gravatar URL associated with the email parameter
   def gravatar_url

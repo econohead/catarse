@@ -1,4 +1,7 @@
 Catarse::Application.routes.draw do
+  devise_for :users, :controllers => {:registrations => "registrations", :passwords => "passwords"} do
+    get "/login" => "devise/sessions#new"
+  end
 
   ActiveAdmin.routes(self)
 
@@ -17,6 +20,8 @@ Catarse::Application.routes.draw do
 
   match "/reports/financial/:project_id/backers" => "reports#financial_by_project", :as => :backers_financial_report
   match "/reports/location/:project_id/backers" => "reports#location_by_project", :as => :backers_location_report
+  match "/reports/users_most_backed" => "reports#users_most_backed", :as => :most_backed_report
+  match "/reports/all_confirmed_backers" => "reports#all_confirmed_backers", :as => :all_confirmed_backers_report
 
   # Static Pages
   match '/sitemap' => "static#sitemap", :as => :sitemap
@@ -35,11 +40,9 @@ Catarse::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create"
   match "/auth/failure" => "sessions#failure"
   match "/logout" => "sessions#destroy", :as => :logout
-  if Rails.env == "test"
-    match "/fake_login" => "sessions#fake_create", :as => :fake_login
-  end
   resources :posts, only: [:index, :create]
   resources :projects, only: [:index, :new, :create, :show] do
+    resources :updates, :only => [:index, :create, :destroy]
     resources :rewards
     resources :backers, controller: 'projects/backers' do
       collection do
@@ -66,8 +69,8 @@ Catarse::Application.routes.draw do
     end
   end
   resources :users do
+    resources :backers, :only => [:index]
     member do
-      get 'backs'
       get 'projects'
       get 'credits'
     end
@@ -92,11 +95,22 @@ Catarse::Application.routes.draw do
 
   resources :blog, only: :index do
   end
-  
+
   resources :curated_pages do
     collection do
       post 'update_attribute_on_the_spot'
     end
   end
-  match "/:permalink" => "curated_pages#show", as: :curated_page
+  match "/pages/:permalink" => "curated_pages#show", as: :curated_page
+
+  # Non production routes
+  if Rails.env == "test"
+    match "/fake_login" => "sessions#fake_create", :as => :fake_login
+  elsif Rails.env == "development"
+    resources :emails, :only => [ :index ]
+  end
+
+
+  match "/:permalink" => "projects#show", as: :project_by_slug
+
 end

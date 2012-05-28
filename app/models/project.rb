@@ -13,6 +13,8 @@ class Project < ActiveRecord::Base
   has_many :curated_pages, :through => :projects_curated_pages
   has_many :backers, :dependent => :destroy
   has_many :rewards, :dependent => :destroy
+  has_many :updates, :dependent => :destroy
+  has_many :notifications, :dependent => :destroy
   has_and_belongs_to_many :managers, :join_table => "projects_managers", :class_name => 'User'
   accepts_nested_attributes_for :rewards
 
@@ -24,7 +26,12 @@ class Project < ActiveRecord::Base
       '>' => '&gt;',
       '<' => '&lt;',
       '"' => '"' }
+    image
+    youtube width: 640, height: 430, wmode: "opaque"
+    vimeo width: 640, height: 430
     redcloth :target => :_blank
+    youtube :width => 580, :height => 378
+    vimeo :width => 580, :height => 378
     link :target => :_blank
   end
 
@@ -48,6 +55,7 @@ class Project < ActiveRecord::Base
 
   validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :video_url
   validates_length_of :headline, :maximum => 140
+  validates_uniqueness_of :permalink, :allow_blank => true, :allow_nil => true
   before_create :store_image_url
 
   def store_image_url
@@ -82,6 +90,18 @@ class Project < ActiveRecord::Base
 
   def total_backers
     backers.confirmed.count
+  end
+
+  def display_status
+    if successful? and expired?
+      'successful'
+    elsif expired?
+      'expired'
+    elsif waiting_confirmation?
+      'waiting_confirmation'
+    elsif in_time?
+      'in_time'
+    end
   end
 
   def successful?
@@ -184,17 +204,15 @@ class Project < ActiveRecord::Base
       created_at: created_at,
       time_to_go: time_to_go,
       remaining_text: remaining_text,
-      url: "/projects/#{self.to_param}",
+      url: (self.permalink.blank? ? "/projects/#{self.to_param}" : '/' + self.permalink),
+      full_uri: I18n.t('site.base_url') + (self.permalink.blank? ? Rails.application.routes.url_helpers.project_path(self) : '/' + self.permalink),
       expired: expired?,
       successful: successful?,
-      waiting_confirmation: waiting_confirmation?
+      waiting_confirmation: waiting_confirmation?,
+      display_status_to_box: I18n.t("project.display_status.#{display_status}").capitalize,
+      display_expires_at: display_expires_at,
+      in_time: in_time?
     }
-  end
-
-  def posts
-    @posts ||= Post.all(project: self)
-  rescue
-    []
   end
 
 end

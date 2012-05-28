@@ -1,8 +1,8 @@
 # coding: utf-8
 class UsersController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource except: :update_attribute_on_the_spot
   inherit_resources
-  actions :show
+  actions :show, :update
   can_edit_on_the_spot
   before_filter :can_update_on_the_spot?, :only => :update_attribute_on_the_spot
   respond_to :json, :only => [:backs, :projects, :request_refund]
@@ -12,53 +12,41 @@ class UsersController < ApplicationController
       fb_admins_add(@user.facebook_id) if @user.facebook_id
       @title = "#{@user.display_name}"
       @credits = @user.backs.can_refund.within_refund_deadline.all
-
-      # @backs = @user.backs.confirmed.order(:confirmed_at)
-      # @backs = @backs.not_anonymous unless @user == current_user or (current_user and current_user.admin)
-      # @backs = @backs.all
-      # @projects = @user.projects.order("updated_at DESC")
-      # @projects = @projects.visible unless @user == current_user
-      # @projects = @projects.all
     }
   end
 
-  def backs
-    @user = User.find(params[:id])
-    @backs = @user.backs.confirmed
-    @backs = @backs.not_anonymous unless @user == current_user or (current_user and current_user.admin)
-    @backs = @backs.order("confirmed_at DESC").paginate :page => params[:page], :per_page => 10
-    render :json => @backs.to_json({:include_project => true, :include_reward => true})
+  def update
+    update! do 
+      flash[:notice] = t('users.current_user_fields.updated')
+      return redirect_to user_path(@user, :anchor => 'settings')
+    end
   end
 
   def projects
     @user = User.find(params[:id])
     @projects = @user.projects.order("updated_at DESC")
     @projects = @projects.visible unless @user == current_user
-    @projects = @projects.paginate :page => params[:page], :per_page => 10
+    @projects = @projects.page(params[:page]).per(10)
     render :json => @projects
   end
 
   def credits
     @user = User.find(params[:id])
-    @credits = @user.backs.can_refund.within_refund_deadline.all
+    @credits = @user.backs.can_refund.within_refund_deadline.order(:id).all
     render :json => @credits
   end
 
   def request_refund
-    back = Backer.find(params[:id])
-    if back.nil?
-      status = 'not found'
-    elsif not authorize!(:request_refund, back)
-      status = I18n.t('credits.refund.cannot_refund')
-    else
-      begin
-        back.refund!
-        status = 'Pedido de estorno enviado'
-      rescue Exception => e
-        status = e.message
-      end
+    back = Backer.find(params[:back_id])
+    begin
+      refund = Credits::Refund.new(back, current_user)
+      refund.make_request!
+      status = refund.message
+    rescue Exception => e
+      status = e.message
     end
-    render :json => {:status => status}
+
+    render :json => {:status => status, :credits => current_user.reload.display_credits}
   end
 
   private

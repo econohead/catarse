@@ -3,41 +3,58 @@ require 'spec_helper'
 
 describe Project do
 
-  context "validations and callbacks" do
+  describe "associations" do
+    it{ should have_many :projects_curated_pages }
+    it{ should have_many :curated_pages }
+    it{ should have_many :backers }
+    it{ should have_many :rewards }
+    it{ should have_many :updates }
+    it{ should have_many :notifications }
+  end
 
+  describe "validations" do
     %w[name user category video_url about headline goal expires_at].each do |field|
       it{ should validate_presence_of field }
     end
-
     it{ should ensure_length_of(:headline).is_at_most(140) }
-
-    it "should be valid from factory" do
-      Factory(:project).should be_valid
-    end
-
-    it "should remove dependencies when destroy a project" do
-      p = Factory.build(:project)
-      p.save
-      r = Factory.build(:reward, :project_id => p.id)
-      r.save
-
-      p.destroy
-      p.destroyed?.should be_true
-      lambda { r.reload }.should raise_error
-    end
-
   end
 
-  context "#posts" do
-    subject{ Factory(:project).posts }
-    before{ mock_tumblr }
-    its(:count){ should be 2 }
-    it{ subject.first["type"].should == "regular" }
-    it{ subject.first["regular_title"].should == "Belo Monte de Vozes" }
-    it{ subject.last["regular_title"].should == "Banda mais bonita" }
+  describe "#display_status" do
+    let(:project){ Factory(:project) }
+    subject{ project.display_status }
+    context "when successful and expired" do
+      before do 
+        project.stubs(:successful?).returns(true) 
+        project.stubs(:expired?).returns(true) 
+      end
+      it{ should == 'successful' }
+    end
+
+    context "when successful and in_time" do
+      before do 
+        project.stubs(:successful?).returns(true) 
+        project.stubs(:in_time?).returns(true) 
+      end
+      it{ should == 'in_time' }
+    end
+
+    context "when expired" do
+      before{ project.stubs(:expired?).returns(true) }
+      it{ should == 'expired' }
+    end
+
+    context "when waiting confirmation" do
+      before{ project.stubs(:waiting_confirmation?).returns(true) }
+      it{ should == 'waiting_confirmation' }
+    end
+
+    context "when in_time" do
+      before{ project.stubs(:in_time?).returns(true) }
+      it{ should == 'in_time' }
+    end
   end
 
-  context "#vimeo" do
+  describe "#vimeo" do
 
     def build_with_video url
       Factory.build(:project, :video_url => url)

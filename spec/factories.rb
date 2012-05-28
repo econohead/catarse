@@ -22,6 +22,7 @@ Factory.define :category do |f|
 end
 Factory.define :project do |f|
   f.name "Foo bar"
+  f.permalink { Factory.next(:permalink) }
   f.association :user, :factory => :user
   f.association :category, :factory => :category
   f.about "Foo bar"
@@ -78,4 +79,19 @@ end
 Factory.define :projects_curated_page do |f|
   f.association :project, :factory => :project
   f.association :curated_page, :factory => :curated_page
+end
+
+Factory.define :institutional_video do |f|
+  f.title "My title"
+  f.description "Some Description"
+  f.video_url "http://vimeo.com/35492726"
+  f.visible false
+end
+
+Factory.define :update do |f|
+  f.association :project, :factory => :project
+  f.association :user, :factory => :user
+  f.title "My title"
+  f.comment "This is a comment"
+  f.comment_html "<p>This is a comment</p>"
 end
