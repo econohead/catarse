@@ -12,6 +12,7 @@ gem 'active_paypal_adaptive_payment', '~> 0.3.13'
 gem 'httpclient', '2.2.4'
 gem 'selenium-webdriver', '2.21.1'
 gem 'bourbon'
+gem "airbrake"
 
 
 gem 'feedzirra'
@@ -28,7 +29,7 @@ gem 'validation_reflection'
 gem 'inherited_resources', '= 1.1.2'
 gem 'maxim-sexy_pg_constraints'
 gem 'spectator-validates_email', :require => 'validates_email'
-gem 'has_vimeo_video', '>= 0.0.3'
+gem 'has_vimeo_video', '>= 0.0.4'
 gem 'wirble'
 gem "on_the_spot"
 gem 'unicorn'
