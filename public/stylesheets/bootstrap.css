@@ -7874,7 +7874,7 @@ input.error, textarea.error {
 
 /* line 1, ../../app/stylesheets/content/_body.sass */
 body {
-  background: #f0f0f0;
+  background: white;
 }
 /* line 6, ../../app/stylesheets/content/_body.sass */
 body #page_content .container {
@@ -7889,7 +7889,10 @@ body #page_content .container {
   border-radius: 4px;
   padding: 0 10px 0 10px;
   background: white;
-  border: 1px #dfdfdf solid;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px;
   margin-bottom: 40px;
 }
 /* line 35, ../../../../.rvm/gems/ruby-1.9.2-p318/gems/compass-960-plugin-0.10.4/stylesheets/960/_grid.sass */
@@ -8996,7 +8999,7 @@ body #logos .power a {
   margin-right: 20px;
   height: 54px;
   border: none;
-  background: url("/images/catarse/logo164x54.png") left top no-repeat;
+  background: url("/images/catarse/logo200x48.png") left top no-repeat;
   text-indent: -9999em;
 }
 /* line 16, ../../app/stylesheets/content/_header.sass */
@@ -9106,7 +9109,7 @@ body #logos .power a {
 }
 /* line 71, ../../app/stylesheets/content/_header.sass */
 #header nav.menu a:hover {
-  color: #e75297;
+  color: #59af6d;
 }
 /* line 73, ../../app/stylesheets/content/_header.sass */
 #header .search {
@@ -9683,7 +9686,7 @@ body #logos .power a {
   -ms-border-radius: 4px 0 0 4px;
   -khtml-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
-  background: #333333;
+  background: #64cb64;
 }
 /* line 15, ../../app/stylesheets/content/_recommended_header.sass */
 #recommended_header .resume_about h1, #recommended_header .resume_about h4 {
@@ -9725,7 +9728,7 @@ body #logos .power a {
   width: 239px;
   padding: 13px 0 0 20px;
   height: 245px;
-  background: #333333;
+  background: rgba(0, 0, 0, 0.8);
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
@@ -9754,7 +9757,7 @@ body #logos .power a {
 #recommended_header .project_info .info h3 {
   font-family: "Lato-Regular";
   font-size: 18px;
-  color: #e75297;
+  color: white;
   background: url("/images/catarse/min_star12x11.png") left 5px no-repeat;
   text-indent: 18px;
   float: left;
