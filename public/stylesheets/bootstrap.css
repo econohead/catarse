@@ -9020,28 +9020,29 @@ body #logos .power a {
 /* line 23, ../../app/stylesheets/content/_header.sass */
 #header nav.actions a {
   color: #333333;
+  line-height: 25px;
   font-size: 18px;
   margin-right: 27px;
 }
-/* line 27, ../../app/stylesheets/content/_header.sass */
+/* line 28, ../../app/stylesheets/content/_header.sass */
 #header nav.actions a:last-child {
   margin-right: 0;
 }
-/* line 29, ../../app/stylesheets/content/_header.sass */
+/* line 30, ../../app/stylesheets/content/_header.sass */
 #header nav.actions a:hover {
   text-decoration: underline;
 }
-/* line 31, ../../app/stylesheets/content/_header.sass */
+/* line 32, ../../app/stylesheets/content/_header.sass */
 #header nav.actions a.explore {
-  background: url("/images/catarse/explore_icon23x15.png") left 3px no-repeat;
+  background: url("/images/catarse/open_box.png") left 3px no-repeat;
   text-indent: 30px;
 }
-/* line 34, ../../app/stylesheets/content/_header.sass */
+/* line 35, ../../app/stylesheets/content/_header.sass */
 #header nav.actions a.submit_project {
-  background: url("/images/catarse/submit_project_icon25x13.png") left 4px no-repeat;
+  background: url("/images/catarse/up_cloud.png") left 4px no-repeat;
   text-indent: 30px;
 }
-/* line 37, ../../app/stylesheets/content/_header.sass */
+/* line 38, ../../app/stylesheets/content/_header.sass */
 #header nav.menu {
   display: inline;
   float: left;
@@ -9050,7 +9051,7 @@ body #logos .power a {
   width: 220px;
   margin-top: 20px;
 }
-/* line 40, ../../app/stylesheets/content/_header.sass */
+/* line 41, ../../app/stylesheets/content/_header.sass */
 #header nav.menu a {
   font-family: "Lato-Regular";
   text-transform: lowercase;
@@ -9058,14 +9059,14 @@ body #logos .power a {
   font-size: 14px;
   margin-right: 12px;
 }
-/* line 46, ../../app/stylesheets/content/_header.sass */
+/* line 47, ../../app/stylesheets/content/_header.sass */
 #header nav.menu a.my_profile_link {
   width: 130px;
   display: block;
   float: right;
   margin-right: 0;
 }
-/* line 51, ../../app/stylesheets/content/_header.sass */
+/* line 52, ../../app/stylesheets/content/_header.sass */
 #header nav.menu a.my_profile_link img.profile_picture {
   border: 1px #333333;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px;
@@ -9085,33 +9086,33 @@ body #logos .power a {
   margin-top: -14px;
   margin-right: 5px;
 }
-/* line 60, ../../app/stylesheets/content/_header.sass */
+/* line 61, ../../app/stylesheets/content/_header.sass */
 #header nav.menu a.my_profile_link img.profile_picture:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
   -o-box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
   box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
 }
-/* line 62, ../../app/stylesheets/content/_header.sass */
+/* line 63, ../../app/stylesheets/content/_header.sass */
 #header nav.menu a.my_profile_link .current_user_name {
   float: left;
   margin-right: 5px;
 }
-/* line 65, ../../app/stylesheets/content/_header.sass */
+/* line 66, ../../app/stylesheets/content/_header.sass */
 #header nav.menu a.my_profile_link .dropdown_arrow {
   float: left;
   position: relative;
   margin-top: 7px;
 }
-/* line 69, ../../app/stylesheets/content/_header.sass */
+/* line 70, ../../app/stylesheets/content/_header.sass */
 #header nav.menu a:last-child {
   margin-right: none;
 }
-/* line 71, ../../app/stylesheets/content/_header.sass */
+/* line 72, ../../app/stylesheets/content/_header.sass */
 #header nav.menu a:hover {
   color: #59af6d;
 }
-/* line 73, ../../app/stylesheets/content/_header.sass */
+/* line 74, ../../app/stylesheets/content/_header.sass */
 #header .search {
   display: inline;
   float: left;
@@ -9120,7 +9121,7 @@ body #logos .power a {
   width: 220px;
   margin-top: 18px;
 }
-/* line 76, ../../app/stylesheets/content/_header.sass */
+/* line 77, ../../app/stylesheets/content/_header.sass */
 #header .search form {
   width: 220px;
   height: 22px;
@@ -9133,7 +9134,7 @@ body #logos .power a {
   border: 1px #cccccc solid;
   background: white;
 }
-/* line 83, ../../app/stylesheets/content/_header.sass */
+/* line 84, ../../app/stylesheets/content/_header.sass */
 #header .search form input[type="text"] {
   border: none;
   width: 190px;
@@ -9141,11 +9142,11 @@ body #logos .power a {
   margin-left: 3px;
   margin-top: 3px;
 }
-/* line 89, ../../app/stylesheets/content/_header.sass */
+/* line 90, ../../app/stylesheets/content/_header.sass */
 #header .search form input[type="text"]:focus {
   outline: none;
 }
-/* line 91, ../../app/stylesheets/content/_header.sass */
+/* line 92, ../../app/stylesheets/content/_header.sass */
 #header .search form input[type="submit"] {
   background: url("/images/catarse/search_submit15x15.png") left top no-repeat;
   width: 15px;
@@ -9912,20 +9913,21 @@ body #logos .power a {
 .sidebar .content .blog h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
-  background: url("/images/catarse/blog_icon17x14.png") left 5px no-repeat;
+  line-height: 25px;
+  background: url("/images/catarse/blog.png") left 5px no-repeat;
   text-indent: 28px;
   color: black;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
 }
-/* line 15, ../../app/stylesheets/content/_sidebar.sass */
+/* line 16, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li {
   padding-bottom: 30px;
 }
-/* line 17, ../../app/stylesheets/content/_sidebar.sass */
+/* line 18, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li:last-child {
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 19, ../../app/stylesheets/content/_sidebar.sass */
+/* line 20, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li h2 {
   float: left;
   width: 100%;
@@ -9933,16 +9935,16 @@ body #logos .power a {
   font-size: 14px;
   padding-top: 4px;
 }
-/* line 25, ../../app/stylesheets/content/_sidebar.sass */
+/* line 26, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li h2 a {
   color: #333333;
   text-decoration: none;
 }
-/* line 28, ../../app/stylesheets/content/_sidebar.sass */
+/* line 29, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li h2 a:hover {
   color: #e75297;
 }
-/* line 30, ../../app/stylesheets/content/_sidebar.sass */
+/* line 31, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li h2 img {
   margin-top: -4px;
   margin-right: 10px;
@@ -9950,7 +9952,7 @@ body #logos .power a {
   width: 48px;
   height: 39px;
 }
-/* line 36, ../../app/stylesheets/content/_sidebar.sass */
+/* line 37, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li p.author {
   clear: both;
   font-family: Arial;
@@ -9958,24 +9960,24 @@ body #logos .power a {
   color: #333333;
   padding: 8px 0 10px 0;
 }
-/* line 42, ../../app/stylesheets/content/_sidebar.sass */
+/* line 43, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li a.resume {
   font-family: Arial;
   font-size: 12px;
   color: #333333;
   text-decoration: none;
 }
-/* line 47, ../../app/stylesheets/content/_sidebar.sass */
+/* line 48, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li a.resume:hover {
   color: #e75297;
 }
-/* line 49, ../../app/stylesheets/content/_sidebar.sass */
+/* line 50, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .facebook {
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 53, ../../app/stylesheets/content/_sidebar.sass */
+/* line 54, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .facebook h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -9985,13 +9987,13 @@ body #logos .power a {
   padding-top: 6px;
   padding-bottom: 25px;
 }
-/* line 62, ../../app/stylesheets/content/_sidebar.sass */
+/* line 63, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .twitter {
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 66, ../../app/stylesheets/content/_sidebar.sass */
+/* line 67, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .twitter h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -10001,7 +10003,7 @@ body #logos .power a {
   padding-top: 6px;
   padding-bottom: 25px;
 }
-/* line 74, ../../app/stylesheets/content/_sidebar.sass */
+/* line 75, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .twitter p {
   font-family: Arial;
   font-size: 12px;
@@ -10009,14 +10011,14 @@ body #logos .power a {
   line-height: 133%;
   margin-bottom: 20px;
 }
-/* line 81, ../../app/stylesheets/content/_sidebar.sass */
+/* line 82, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter {
   float: left;
   padding-bottom: 30px;
   margin-top: 30px;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 86, ../../app/stylesheets/content/_sidebar.sass */
+/* line 87, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -10025,7 +10027,7 @@ body #logos .power a {
   color: black;
   padding-bottom: 25px;
 }
-/* line 94, ../../app/stylesheets/content/_sidebar.sass */
+/* line 95, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter form input[type='text'] {
   width: 183px;
   height: 27px;
@@ -10038,7 +10040,7 @@ body #logos .power a {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 100, ../../app/stylesheets/content/_sidebar.sass */
+/* line 101, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter form input[type="submit"] {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -10056,14 +10058,14 @@ body #logos .power a {
   font-family: "Lato-Regular";
   font-size: 16px;
 }
-/* line 111, ../../app/stylesheets/content/_sidebar.sass */
+/* line 112, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter form input[type="submit"]:active {
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
   -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
 }
-/* line 114, ../../app/stylesheets/content/_sidebar.sass */
+/* line 115, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .faq {
   display: block;
   clear: both;
@@ -10071,7 +10073,7 @@ body #logos .power a {
   padding-bottom: 30px;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 120, ../../app/stylesheets/content/_sidebar.sass */
+/* line 121, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .faq h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -10080,14 +10082,14 @@ body #logos .power a {
   color: black;
   padding-bottom: 15px;
 }
-/* line 128, ../../app/stylesheets/content/_sidebar.sass */
+/* line 129, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule {
   display: block;
   clear: both;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 133, ../../app/stylesheets/content/_sidebar.sass */
+/* line 134, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -10097,7 +10099,7 @@ body #logos .power a {
   padding-top: 4px;
   padding-bottom: 25px;
 }
-/* line 142, ../../app/stylesheets/content/_sidebar.sass */
+/* line 143, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li {
   width: 100%;
   margin-bottom: 25px;
@@ -10105,21 +10107,21 @@ body #logos .power a {
   float: left;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 148, ../../app/stylesheets/content/_sidebar.sass */
+/* line 149, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li:last-child {
   border-bottom: none;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-/* line 152, ../../app/stylesheets/content/_sidebar.sass */
+/* line 153, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a {
   text-decoration: none;
 }
-/* line 155, ../../app/stylesheets/content/_sidebar.sass */
+/* line 156, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a:hover h4, .sidebar .content .schedule ul.events li a:hover p {
   color: #e75297 !important;
 }
-/* line 157, ../../app/stylesheets/content/_sidebar.sass */
+/* line 158, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a h4 {
   float: left;
   color: black;
@@ -10127,13 +10129,13 @@ body #logos .power a {
   font-size: 20px;
   margin-right: 10px;
 }
-/* line 163, ../../app/stylesheets/content/_sidebar.sass */
+/* line 164, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a h4 span {
   display: block;
   font-family: Arial;
   font-size: 12px;
 }
-/* line 167, ../../app/stylesheets/content/_sidebar.sass */
+/* line 168, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a p {
   padding-top: 4px;
   font-family: Arial;
