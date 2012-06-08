@@ -9170,7 +9170,7 @@ body #logos .power a {
   border-radius: 4px;
   padding: 0 10px 0 10px;
   border: 1px #dfdfdf solid;
-  background: #333333 !important;
+  background: #f5f5dc;
 }
 /* line 35, ../../../../.rvm/gems/ruby-1.9.2-p318/gems/compass-960-plugin-0.10.4/stylesheets/960/_grid.sass */
 .footer .grid_1, .footer .grid_2, .footer .grid_3, .footer .grid_4, .footer .grid_5, .footer .grid_6, .footer .grid_7, .footer .grid_8, .footer .grid_9, .footer .grid_10, .footer .grid_11, .footer .grid_12, .footer .grid_13, .footer .grid_14, .footer .grid_15, .footer .grid_16 {
@@ -9902,14 +9902,19 @@ body #logos .power a {
 
 /* line 1, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
   min-height: 1635px;
   border-left: 1px #dfdfdf solid;
 }
-/* line 4, ../../app/stylesheets/content/_sidebar.sass */
+/* line 5, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content {
   padding: 33px 0 0 22px;
 }
-/* line 7, ../../app/stylesheets/content/_sidebar.sass */
+/* line 8, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -9919,15 +9924,15 @@ body #logos .power a {
   color: black;
   padding-bottom: 10px;
 }
-/* line 16, ../../app/stylesheets/content/_sidebar.sass */
+/* line 17, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li {
   padding-bottom: 30px;
 }
-/* line 18, ../../app/stylesheets/content/_sidebar.sass */
+/* line 19, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li:last-child {
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 20, ../../app/stylesheets/content/_sidebar.sass */
+/* line 21, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li h2 {
   float: left;
   width: 100%;
@@ -9935,16 +9940,16 @@ body #logos .power a {
   font-size: 14px;
   padding-top: 4px;
 }
-/* line 26, ../../app/stylesheets/content/_sidebar.sass */
+/* line 27, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li h2 a {
   color: #333333;
   text-decoration: none;
 }
-/* line 29, ../../app/stylesheets/content/_sidebar.sass */
+/* line 30, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li h2 a:hover {
   color: #e75297;
 }
-/* line 31, ../../app/stylesheets/content/_sidebar.sass */
+/* line 32, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li h2 img {
   margin-top: -4px;
   margin-right: 10px;
@@ -9952,7 +9957,7 @@ body #logos .power a {
   width: 48px;
   height: 39px;
 }
-/* line 37, ../../app/stylesheets/content/_sidebar.sass */
+/* line 38, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li p.author {
   clear: both;
   font-family: Arial;
@@ -9960,24 +9965,24 @@ body #logos .power a {
   color: #333333;
   padding: 8px 0 10px 0;
 }
-/* line 43, ../../app/stylesheets/content/_sidebar.sass */
+/* line 44, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li a.resume {
   font-family: Arial;
   font-size: 12px;
   color: #333333;
   text-decoration: none;
 }
-/* line 48, ../../app/stylesheets/content/_sidebar.sass */
+/* line 49, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .blog ul li a.resume:hover {
   color: #e75297;
 }
-/* line 50, ../../app/stylesheets/content/_sidebar.sass */
+/* line 51, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .facebook {
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 54, ../../app/stylesheets/content/_sidebar.sass */
+/* line 55, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .facebook h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -9987,13 +9992,13 @@ body #logos .power a {
   padding-top: 6px;
   padding-bottom: 25px;
 }
-/* line 63, ../../app/stylesheets/content/_sidebar.sass */
+/* line 64, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .twitter {
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 67, ../../app/stylesheets/content/_sidebar.sass */
+/* line 68, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .twitter h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -10003,7 +10008,7 @@ body #logos .power a {
   padding-top: 6px;
   padding-bottom: 25px;
 }
-/* line 75, ../../app/stylesheets/content/_sidebar.sass */
+/* line 76, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .twitter p {
   font-family: Arial;
   font-size: 12px;
@@ -10011,23 +10016,23 @@ body #logos .power a {
   line-height: 133%;
   margin-bottom: 20px;
 }
-/* line 82, ../../app/stylesheets/content/_sidebar.sass */
+/* line 83, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter {
   float: left;
   padding-bottom: 30px;
   margin-top: 30px;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 87, ../../app/stylesheets/content/_sidebar.sass */
+/* line 88, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
-  background: url("/images/catarse/newsletter_icon18x15.png") left 2px no-repeat;
+  background: url("/images/catarse/news.png") left 2px no-repeat;
   text-indent: 28px;
   color: black;
   padding-bottom: 25px;
 }
-/* line 95, ../../app/stylesheets/content/_sidebar.sass */
+/* line 96, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter form input[type='text'] {
   width: 183px;
   height: 27px;
@@ -10040,7 +10045,7 @@ body #logos .power a {
   -khtml-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 101, ../../app/stylesheets/content/_sidebar.sass */
+/* line 102, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter form input[type="submit"] {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -10058,14 +10063,14 @@ body #logos .power a {
   font-family: "Lato-Regular";
   font-size: 16px;
 }
-/* line 112, ../../app/stylesheets/content/_sidebar.sass */
+/* line 113, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .newsletter form input[type="submit"]:active {
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
   -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
 }
-/* line 115, ../../app/stylesheets/content/_sidebar.sass */
+/* line 116, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .faq {
   display: block;
   clear: both;
@@ -10073,23 +10078,23 @@ body #logos .power a {
   padding-bottom: 30px;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 121, ../../app/stylesheets/content/_sidebar.sass */
+/* line 122, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .faq h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
-  background: url("/images/catarse/faq_icon18x18.png") left 2px no-repeat;
+  background: url("/images/catarse/info.png") left 2px no-repeat;
   text-indent: 28px;
   color: black;
   padding-bottom: 15px;
 }
-/* line 129, ../../app/stylesheets/content/_sidebar.sass */
+/* line 130, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule {
   display: block;
   clear: both;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 134, ../../app/stylesheets/content/_sidebar.sass */
+/* line 135, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -10099,7 +10104,7 @@ body #logos .power a {
   padding-top: 4px;
   padding-bottom: 25px;
 }
-/* line 143, ../../app/stylesheets/content/_sidebar.sass */
+/* line 144, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li {
   width: 100%;
   margin-bottom: 25px;
@@ -10107,21 +10112,21 @@ body #logos .power a {
   float: left;
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
-/* line 149, ../../app/stylesheets/content/_sidebar.sass */
+/* line 150, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li:last-child {
   border-bottom: none;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-/* line 153, ../../app/stylesheets/content/_sidebar.sass */
+/* line 154, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a {
   text-decoration: none;
 }
-/* line 156, ../../app/stylesheets/content/_sidebar.sass */
+/* line 157, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a:hover h4, .sidebar .content .schedule ul.events li a:hover p {
   color: #e75297 !important;
 }
-/* line 158, ../../app/stylesheets/content/_sidebar.sass */
+/* line 159, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a h4 {
   float: left;
   color: black;
@@ -10129,13 +10134,13 @@ body #logos .power a {
   font-size: 20px;
   margin-right: 10px;
 }
-/* line 164, ../../app/stylesheets/content/_sidebar.sass */
+/* line 165, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a h4 span {
   display: block;
   font-family: Arial;
   font-size: 12px;
 }
-/* line 168, ../../app/stylesheets/content/_sidebar.sass */
+/* line 169, ../../app/stylesheets/content/_sidebar.sass */
 .sidebar .content .schedule ul.events li a p {
   padding-top: 4px;
   font-family: Arial;
