@@ -1,6 +1,7 @@
 .footer
   +grid-system(16)
   +border-radius(4px)
+  +box-shadow(rgba(black, 0.2) 1px 1px 1px 1px)
   padding: 0 10px 0 10px
   border: 1px $df_gryn solid
   background: url($images_path+'bg_s3.png') repeat //$ultra_gryn !important
@@ -36,14 +37,14 @@
       +grid(5)
       +grid-suffix(1)
       h3
-        background: url($images_path+'opendata_icon26x26.png') left top no-repeat
+        background: url($images_path+'stats.png') left top no-repeat
         text-indent: 44px
       ul
         display: block
         li
           width: 100%
           float: left
-          margin-bottom: 18px
+          margin-bottom: 10px
           h5
             float: left
             font-family: 'Lato-Bold'
@@ -63,11 +64,11 @@
     .social
       +grid(5)
       h3
-        background: url($images_path+'heart_icon17x14.png') left 6px no-repeat
+        background: url($images_path+'social.png') left 2px no-repeat
         text-indent: 32px
         &.newsletter
           padding-top: 30px
-          padding-bottom: 20px
+          padding-bottom: 30px
           background: url($images_path+'news.png') left 32px no-repeat
       .twitter
         margin-bottom: 20px

@@ -8624,7 +8624,7 @@ body #logos .multide a {
   margin-left: 10px;
 }
 /* line 56, ../../app/stylesheets/content/_body.sass */
-body #logos .comum {
+body #logos .fogventures {
   display: inline;
   float: left;
   margin-left: 10px;
@@ -8633,7 +8633,7 @@ body #logos .comum {
   padding-right: 180px;
 }
 /* line 59, ../../app/stylesheets/content/_body.sass */
-body #logos .comum a {
+body #logos .fogventures a {
   float: left;
   margin-top: 5px;
   margin-left: 10px;
@@ -9179,6 +9179,10 @@ body #logos .power a {
   -ms-border-radius: 4px;
   -khtml-border-radius: 4px;
   border-radius: 4px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 1px;
+  -o-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 1px;
   padding: 0 10px 0 10px;
   border: 1px #dfdfdf solid;
   background: url("/images/catarse/bg_s3.png") repeat;
@@ -9507,12 +9511,12 @@ body #logos .power a {
 .footer .pull_15 {
   left: -900px;
 }
-/* line 7, ../../app/stylesheets/content/_footer.sass */
+/* line 8, ../../app/stylesheets/content/_footer.sass */
 .footer .content {
   padding-top: 30px;
   padding-bottom: 10px;
 }
-/* line 10, ../../app/stylesheets/content/_footer.sass */
+/* line 11, ../../app/stylesheets/content/_footer.sass */
 .footer .content h3 {
   font-family: "Lato-Bold";
   font-size: 18px;
@@ -9520,7 +9524,7 @@ body #logos .power a {
   padding-bottom: 20px;
   padding-top: 5px;
 }
-/* line 16, ../../app/stylesheets/content/_footer.sass */
+/* line 17, ../../app/stylesheets/content/_footer.sass */
 .footer .content .info {
   display: inline;
   float: left;
@@ -9529,17 +9533,17 @@ body #logos .power a {
   width: 220px;
   padding-right: 60px;
 }
-/* line 19, ../../app/stylesheets/content/_footer.sass */
+/* line 20, ../../app/stylesheets/content/_footer.sass */
 .footer .content .info h3 {
   background: url("/images/catarse/info.png") left 5px no-repeat;
   text-indent: 34px;
 }
-/* line 23, ../../app/stylesheets/content/_footer.sass */
+/* line 24, ../../app/stylesheets/content/_footer.sass */
 .footer .content .info ul li {
   margin-bottom: 18px;
   margin-left: 10px;
 }
-/* line 26, ../../app/stylesheets/content/_footer.sass */
+/* line 27, ../../app/stylesheets/content/_footer.sass */
 .footer .content .info ul li a {
   font-family: "Lato-Regular";
   font-size: 18px;
@@ -9547,11 +9551,11 @@ body #logos .power a {
   color: #999999;
   text-decoration: none;
 }
-/* line 32, ../../app/stylesheets/content/_footer.sass */
+/* line 33, ../../app/stylesheets/content/_footer.sass */
 .footer .content .info ul li a:hover {
   color: #e75297;
 }
-/* line 35, ../../app/stylesheets/content/_footer.sass */
+/* line 36, ../../app/stylesheets/content/_footer.sass */
 .footer .content .opendata {
   display: inline;
   float: left;
@@ -9560,22 +9564,22 @@ body #logos .power a {
   width: 280px;
   padding-right: 60px;
 }
-/* line 38, ../../app/stylesheets/content/_footer.sass */
+/* line 39, ../../app/stylesheets/content/_footer.sass */
 .footer .content .opendata h3 {
-  background: url("/images/catarse/opendata_icon26x26.png") left top no-repeat;
+  background: url("/images/catarse/stats.png") left top no-repeat;
   text-indent: 44px;
 }
-/* line 41, ../../app/stylesheets/content/_footer.sass */
+/* line 42, ../../app/stylesheets/content/_footer.sass */
 .footer .content .opendata ul {
   display: block;
 }
-/* line 43, ../../app/stylesheets/content/_footer.sass */
+/* line 44, ../../app/stylesheets/content/_footer.sass */
 .footer .content .opendata ul li {
   width: 100%;
   float: left;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
-/* line 47, ../../app/stylesheets/content/_footer.sass */
+/* line 48, ../../app/stylesheets/content/_footer.sass */
 .footer .content .opendata ul li h5 {
   float: left;
   font-family: "Lato-Bold";
@@ -9585,7 +9589,7 @@ body #logos .power a {
   opacity: 1;
   padding-right: 10px;
 }
-/* line 54, ../../app/stylesheets/content/_footer.sass */
+/* line 55, ../../app/stylesheets/content/_footer.sass */
 .footer .content .opendata ul li p {
   padding-top: 3px;
   float: left;
@@ -9596,7 +9600,7 @@ body #logos .power a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
-/* line 63, ../../app/stylesheets/content/_footer.sass */
+/* line 64, ../../app/stylesheets/content/_footer.sass */
 .footer .content .social {
   display: inline;
   float: left;
@@ -9604,22 +9608,22 @@ body #logos .power a {
   margin-right: 10px;
   width: 280px;
 }
-/* line 65, ../../app/stylesheets/content/_footer.sass */
+/* line 66, ../../app/stylesheets/content/_footer.sass */
 .footer .content .social h3 {
-  background: url("/images/catarse/heart_icon17x14.png") left 6px no-repeat;
+  background: url("/images/catarse/social.png") left 2px no-repeat;
   text-indent: 32px;
 }
-/* line 68, ../../app/stylesheets/content/_footer.sass */
+/* line 69, ../../app/stylesheets/content/_footer.sass */
 .footer .content .social h3.newsletter {
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   background: url("/images/catarse/news.png") left 32px no-repeat;
 }
-/* line 72, ../../app/stylesheets/content/_footer.sass */
+/* line 73, ../../app/stylesheets/content/_footer.sass */
 .footer .content .social .twitter {
   margin-bottom: 20px;
 }
-/* line 75, ../../app/stylesheets/content/_footer.sass */
+/* line 76, ../../app/stylesheets/content/_footer.sass */
 .footer .content .social form input[type="text"] {
   float: left;
   width: 170px;
@@ -9633,13 +9637,13 @@ body #logos .power a {
   border: 1px #dfdfdf solid;
   border-right: none;
 }
-/* line 82, ../../app/stylesheets/content/_footer.sass */
+/* line 83, ../../app/stylesheets/content/_footer.sass */
 .footer .content .social form input[type="text"]:focus {
   outline: none;
   border: 1px #e75297 solid;
   border-right: none;
 }
-/* line 86, ../../app/stylesheets/content/_footer.sass */
+/* line 87, ../../app/stylesheets/content/_footer.sass */
 .footer .content .social form input[type="submit"] {
   float: left;
   background: #64cb64;
@@ -9665,7 +9669,7 @@ body #logos .power a {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 98, ../../app/stylesheets/content/_footer.sass */
+/* line 99, ../../app/stylesheets/content/_footer.sass */
 .footer .content .social form input[type="submit"]:active {
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px inset;
