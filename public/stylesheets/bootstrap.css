@@ -10540,12 +10540,12 @@ body #logos .power a {
   margin-right: 0;
   font-family: "Lato-Regular";
   font-size: 14px;
-  color: #e75297;
+  color: #cccccc;
   text-decoration: none;
 }
 /* line 34, ../../app/stylesheets/resources/projects/_index.sass */
 [data-namespace="null"][data-controller="projects"][data-action="index"] #page_content .explore_link a:hover {
-  color: #59af6d;
+  color: #e75297;
 }
 /* line 37, ../../app/stylesheets/resources/projects/_index.sass */
 [data-namespace="null"][data-controller="projects"][data-action="index"] #page_content .partners {
